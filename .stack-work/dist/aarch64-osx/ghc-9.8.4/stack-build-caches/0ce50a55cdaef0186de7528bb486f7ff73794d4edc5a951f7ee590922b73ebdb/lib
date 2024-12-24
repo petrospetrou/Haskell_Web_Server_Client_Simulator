@@ -1,0 +1,16 @@
+/Users/petros/.ghcup/ghc/9.8.4/lib/ghc-9.8.4/lib/aarch64-osx-ghc-9.8.4/rts-1.0.2/include/ghcversion.h:
+  hash: 95162794a3bf5e6167631fdd41a509846597231d523d0f21a76713b1f801373c
+? /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/autogen/Paths_haskell_individual_coursework.hs
+: hash: 40c06d3a6d2eff767ee8550552fd7cdc642108c6fc8e294f9ee677fd62b9ee8a
+? /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/autogen/cabal_macros.h
+: hash: bdc006c3047c3872ee0dd06e0a5fd4d20629591117357f53257e051de6269240
+/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/CHANGELOG.md:
+  hash: 60396e9258df16970430fdfa5aef74f1ea267c99f058309b320fe2003ad4c735
+/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/README.md:
+  hash: 81c99807c7f77c5099e4b636947bf6ce8d25da2d944caff7171f2cea7e098bdf
+/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/haskell-individual-coursework.cabal:
+  hash: 0a168e594252f3c80317672548512ed70a5cf2331ec4694e4cd1e6e4377c6a8f
+/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/package.yaml:
+  hash: feb8df3abc518b1f6ff08350392cfeab0c00fecb49b1b4321bea3179728cf223
+/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/src/Lib.hs:
+  hash: 11d6d255cb397fa45980eb516ea685146565d9de2108c4eea356ea41db8364be
