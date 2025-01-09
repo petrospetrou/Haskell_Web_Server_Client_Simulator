@@ -3,10 +3,10 @@
 module Main where
 
 import Control.Concurrent (forkIO, threadDelay, MVar, newMVar, modifyMVar_, readMVar)
-import Control.Monad (forM_, replicateM_)
+import Control.Monad (forM_, replicateM_, when)
 import Data.Time (getCurrentTime, UTCTime)
 import System.Random (randomRIO)
-import System.IO (withFile, IOMode(AppendMode), hPutStrLn)
+import System.IO (withFile, IOMode(AppendMode, WriteMode), hPutStrLn)
 
 -- Data Types for Request and Response
 data Request = Request { reqTimestamp :: UTCTime, reqContent :: String } deriving (Show)
@@ -29,25 +29,31 @@ processRequest (Request reqTime content) = do
     return $ Response resTime responseContent
 
 -- Server function
-server :: RequestQueue -> IO ()
-server queue = do
-    replicateM_ 100 $ do
-        requests <- readMVar queue
-        case requests of
-            [] -> threadDelay 100000  -- Wait if no requests
-            (req:rest) -> do
-                modifyMVar_ queue (const $ return rest)
-                response <- processRequest req
-                logResponse req response
+server :: RequestQueue -> MVar Int -> IO ()
+server queue counter = do
+    let processRequests = do
+            count <- readMVar counter
+            when (count < 100) $ do
+                modifyMVar_ queue $ \reqs -> case reqs of
+                    [] -> return reqs
+                    (req:rest) -> do
+                        response <- processRequest req
+                        logResponse req response
+                        modifyMVar_ counter (\c -> return (c + 1))
+                        return rest
+                processRequests
+    processRequests
 
 -- Client function
-client :: Int -> RequestQueue -> IO ()
-client clientId queue = do
+client :: Int -> RequestQueue -> MVar Int -> IO ()
+client clientId queue counter = do
     replicateM_ 10 $ do
-        delay <- randomRIO (100000, 500000)
-        threadDelay delay
-        request <- createRequest clientId
-        modifyMVar_ queue (\reqs -> return (reqs ++ [request]))
+        count <- readMVar counter
+        when (count < 100) $ do
+            delay <- randomRIO (100000, 500000)
+            threadDelay delay
+            request <- createRequest clientId
+            modifyMVar_ queue (\reqs -> return (reqs ++ [request]))
 
 -- Log requests and responses
 logResponse :: Request -> Response -> IO ()
@@ -60,6 +66,8 @@ logResponse (Request reqTime reqContent) (Response resTime resContent) =
 main :: IO ()
 main = do
     queue <- newMVar []
-    forkIO $ server queue
-    forM_ [1..10] $ \clientId -> forkIO $ client clientId queue
-    threadDelay 5000000  -- Wait for all threads to complete before exiting
+    counter <- newMVar 0
+    withFile "requests.log" WriteMode $ const (return ())  -- Clear the log file at start
+    forkIO $ server queue counter
+    forM_ [1..10] $ \clientId -> forkIO $ client clientId queue counter
+    threadDelay 20000000  -- Wait for all threads to complete before exiting
