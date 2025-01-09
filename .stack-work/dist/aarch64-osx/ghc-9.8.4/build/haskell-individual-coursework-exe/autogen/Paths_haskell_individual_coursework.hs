@@ -47,7 +47,7 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 bindir     = "/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/install/aarch64-osx/0ce50a55cdaef0186de7528bb486f7ff73794d4edc5a951f7ee590922b73ebdb/9.8.4/bin"
-libdir     = "/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/install/aarch64-osx/0ce50a55cdaef0186de7528bb486f7ff73794d4edc5a951f7ee590922b73ebdb/9.8.4/lib/aarch64-osx-ghc-9.8.4/haskell-individual-coursework-0.1.0.0-5TfLkcr4OzQ8UvWuacXZUK-haskell-individual-coursework-exe"
+libdir     = "/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/install/aarch64-osx/0ce50a55cdaef0186de7528bb486f7ff73794d4edc5a951f7ee590922b73ebdb/9.8.4/lib/aarch64-osx-ghc-9.8.4/haskell-individual-coursework-0.1.0.0-BKnaCeggGyD1rJSSAn2ySw-haskell-individual-coursework-exe"
 dynlibdir  = "/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/install/aarch64-osx/0ce50a55cdaef0186de7528bb486f7ff73794d4edc5a951f7ee590922b73ebdb/9.8.4/lib/aarch64-osx-ghc-9.8.4"
 datadir    = "/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/install/aarch64-osx/0ce50a55cdaef0186de7528bb486f7ff73794d4edc5a951f7ee590922b73ebdb/9.8.4/share/aarch64-osx-ghc-9.8.4/haskell-individual-coursework-0.1.0.0"
 libexecdir = "/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/install/aarch64-osx/0ce50a55cdaef0186de7528bb486f7ff73794d4edc5a951f7ee590922b73ebdb/9.8.4/libexec/aarch64-osx-ghc-9.8.4/haskell-individual-coursework-0.1.0.0"
