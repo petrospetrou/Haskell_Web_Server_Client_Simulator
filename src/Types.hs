@@ -16,3 +16,6 @@ data Response = Response
   , resContent   :: String
   }
   deriving (Show)
+
+-- | Data type for the request queue
+type RequestQueue = MVar [Request]
