@@ -9,11 +9,6 @@ import System.Random (randomRIO)
 import System.IO (withFile, IOMode(AppendMode, WriteMode), hPutStrLn)
 
 import Types
--- -- Data Types for Request and Response
--- data Request = Request { reqTimestamp :: UTCTime, reqContent :: String } deriving (Show)
--- data Response = Response { resTimestamp :: UTCTime, resContent :: String } deriving (Show)
-
--- type RequestQueue = MVar [Request]
 
 -- Function to create a random request
 createRequest :: Int -> IO Request
