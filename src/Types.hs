@@ -10,7 +10,7 @@ data Request = Request
   }
   deriving (Show)
 
--- | Response Data type for modelling an HTTP response
+-- | Response data type for modelling an HTTP response
 data Response = Response
   { responseTimestamp :: UTCTime
   , responseContent   :: String
