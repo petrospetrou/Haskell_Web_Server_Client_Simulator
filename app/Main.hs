@@ -8,7 +8,11 @@ import Data.Time (getCurrentTime, UTCTime)
 import System.Random (randomRIO)
 import System.IO (withFile, IOMode(AppendMode, WriteMode), hPutStrLn)
 
-import Types
+-- Data Types for Request and Response
+data Request = Request { reqTimestamp :: UTCTime, reqContent :: String } deriving (Show)
+data Response = Response { resTimestamp :: UTCTime, resContent :: String } deriving (Show)
+
+type RequestQueue = MVar [Request]
 
 -- Function to create a random request
 createRequest :: Int -> IO Request
@@ -66,4 +70,10 @@ main = do
     withFile "requests.log" WriteMode $ const (return ())  -- Clear the log file at start
     forkIO $ server queue counter
     forM_ [1..10] $ \clientId -> forkIO $ client clientId queue counter
-    threadDelay 20000000  -- Wait for all threads to complete before exiting
+    -- Dynamically wait for exactly 100 requests to complete
+    let waitForCompletion = do
+            count <- readMVar counter
+            when (count < 100) $ do
+                threadDelay 100000  -- Check every 100ms
+                waitForCompletion
+    waitForCompletion
