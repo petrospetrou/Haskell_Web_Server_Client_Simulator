@@ -5,15 +5,15 @@ import Data.Time (UTCTime)
 
 -- | Request data type for modelling an HTTP request
 data Request = Request 
-  { reqTimestamp :: UTCTime
-  , reqContent   :: String
+  { requestTimestamp :: UTCTime
+  , requestContent   :: String
   }
   deriving (Show)
 
 -- | Response Data type for modelling an HTTP response
 data Response = Response
-  { resTimestamp :: UTCTime
-  , resContent   :: String
+  { responseTimestamp :: UTCTime
+  , responseContent   :: String
   }
   deriving (Show)
 
