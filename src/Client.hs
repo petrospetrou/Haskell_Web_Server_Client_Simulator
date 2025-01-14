@@ -6,12 +6,14 @@ import System.Random (randomRIO)
 import Types
 import Data.Time (getCurrentTime)
 
+-- | Function that creates a random request
 createRequest :: Int -> IO Request
 createRequest clientId = do
     timestamp <- getCurrentTime
     let content = "Client " ++ show clientId ++ " says hello!"
     return $ Request timestamp content
 
+-- | Function that simulates the Client
 client :: Int -> RequestQueue -> MVar Int -> IO ()
 client clientId queue counter = do
     replicateM_ 10 $ do

@@ -6,12 +6,14 @@ import Types
 import Log (logResponse)
 import Data.Time (getCurrentTime)
 
+-- | Function that processes the requests and generates a response
 processRequest :: Request -> IO Response
 processRequest (Request requestTime content) = do
     responseTime <- getCurrentTime
     let responseContent = "Response to: " ++ content
     return $ Response responseTime responseContent
 
+-- | Function that simulates the Web Server
 server :: RequestQueue -> MVar Int -> IO ()
 server queue counter = processRequests
   where

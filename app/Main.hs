@@ -8,6 +8,7 @@ import Types
 import Server (server)
 import Client (client)
 
+-- | Main Program
 main :: IO ()
 main = do
     queue <- newMVar []
@@ -20,6 +21,7 @@ main = do
 waitForCompletion :: MVar Int -> IO ()
 waitForCompletion counter = do
     count <- readMVar counter
+    -- | Process exactly 100 request then exit
     when (count < 100) $ do
         threadDelay 100000  -- Check every 100ms
         waitForCompletion counter
