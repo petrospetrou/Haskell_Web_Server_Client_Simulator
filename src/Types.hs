@@ -49,4 +49,4 @@ instance Random RequestType where
 -- | Extra Feature 2 - Authentication Simulation
 -- | List of valid tokens
 validTokens :: [String]
-validTokens = ["token123", "token456", "token789", "tokenABC", "tokenDEF"]
+validTokens = ["46VI4lub7O", "XdBE3lesjh", "AOWu2gMEgI", "q69L0xBG9y", "mdUfIXhQrc"]
