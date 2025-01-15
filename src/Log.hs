@@ -34,7 +34,7 @@ logAuthRetry (Request reqTime reqType reqContent token) =
         hPutStrLn h $ "Request Requeued: " ++ show reqTime ++ " | Type: " ++ show reqType ++ " | Content: " ++ reqContent
         hPutStrLn h $ replicate 50 '-'
 
--- | Function to log the final request count once
+-- | Function to log the final request count
 logFinalCount :: Int -> IO ()
 logFinalCount count =
     withFile "requests.log" AppendMode $ \h -> do
