@@ -10,9 +10,6 @@ import Control.Concurrent (MVar)
 import Data.Time (UTCTime)
 import System.Random (Random(..), randomR)
 
--- | Types of requests (GET, POST, DELETE)
-data RequestType = GET | POST | DELETE deriving (Show, Enum, Bounded)
-
 -- | Request data type for modelling an HTTP request
 data Request = Request 
   { requestTimestamp :: UTCTime
@@ -32,9 +29,11 @@ data Response = Response
 -- | RequestQueue data type for modelling the queue of requests received by the server
 type RequestQueue = MVar [Request]
 
--- | List of valid tokens
-validTokens :: [String]
-validTokens = ["token123", "token456", "token789", "tokenABC", "tokenDEF"]
+-- | Data types for the Extra Features
+
+-- | Extra Feature 1 - Request Type Assignment
+-- | Types of requests (GET, POST, DELETE)
+data RequestType = GET | POST | DELETE deriving (Show, Enum, Bounded)
 
 -- | Random instance for RequestType
 instance Random RequestType where
@@ -46,3 +45,8 @@ instance Random RequestType where
     randomR (lo, hi) g =
         let (index, g') = randomR (fromEnum lo, fromEnum hi) g
         in (toEnum index, g')
+
+-- | Extra Feature 2 - Authentication Simulation
+-- | List of valid tokens
+validTokens :: [String]
+validTokens = ["token123", "token456", "token789", "tokenABC", "tokenDEF"]
