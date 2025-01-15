@@ -25,7 +25,9 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Client
+      Log
+      Server
       Types
   other-modules:
       Paths_haskell_individual_coursework

@@ -1,0 +1,785 @@
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:01.240939 UTC | Type: GET | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.240984 UTC | Content: GET Response to: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:01.253473 UTC | Type: DELETE | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.253498 UTC | Content: DELETE Response: Client 8 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:01.298528 UTC | Type: GET | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.298542 UTC | Content: GET Response to: Client 10 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:01.298541 UTC | Type: DELETE | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.298853 UTC | Content: DELETE Response: Client 1 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:01.314424 UTC | Type: GET | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.31443 UTC | Content: GET Response to: Client 4 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:01.437353 UTC | Type: DELETE | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.437377 UTC | Content: DELETE Response: Client 3 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:01.437359 UTC | Type: GET | Content: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:01.437359 UTC | Type: GET | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.438159 UTC | Content: GET Response to: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:01.440062 UTC | Type: DELETE | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.440065 UTC | Content: DELETE Response: Client 5 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:01.474247 UTC | Type: POST | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.474259 UTC | Content: POST Response to: Client 6 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:01.475388 UTC | Type: DELETE | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.475405 UTC | Content: DELETE Response: Client 10 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:01.481475 UTC | Type: DELETE | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.481535 UTC | Content: DELETE Response: Client 8 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:01.514504 UTC | Type: GET | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.514521 UTC | Content: GET Response to: Client 7 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:01.543045 UTC | Type: GET | Content: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:01.543045 UTC | Type: GET | Content: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:01.543045 UTC | Type: GET | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.543317 UTC | Content: GET Response to: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:01.60542 UTC | Type: GET | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.614021 UTC | Content: GET Response to: Client 5 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - XdBE3lesjh
+Request Requeued: 2025-01-15 16:47:01.653884 UTC | Type: DELETE | Content: Client 8 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:01.653884 UTC | Type: DELETE | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.654097 UTC | Content: DELETE Response: Client 8 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:01.686923 UTC | Type: GET | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.686932 UTC | Content: GET Response to: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:01.696504 UTC | Type: POST | Content: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:01.696504 UTC | Type: POST | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.696704 UTC | Content: POST Response to: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:01.793063 UTC | Type: DELETE | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.79307 UTC | Content: DELETE Response: Client 4 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:01.793076 UTC | Type: POST | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.793301 UTC | Content: POST Response to: Client 6 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:01.793077 UTC | Type: DELETE | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.793397 UTC | Content: DELETE Response: Client 7 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - XdBE3lesjh
+Request Requeued: 2025-01-15 16:47:01.855415 UTC | Type: POST | Content: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:01.855415 UTC | Type: POST | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.855612 UTC | Content: POST Response to: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:01.866155 UTC | Type: DELETE | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.866159 UTC | Content: DELETE Response: Client 2 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:01.90171 UTC | Type: GET | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.901749 UTC | Content: GET Response to: Client 10 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:01.911195 UTC | Type: DELETE | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.911216 UTC | Content: DELETE Response: Client 8 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:01.914438 UTC | Type: GET | Content: Client 4 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:01.914438 UTC | Type: GET | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.914662 UTC | Content: GET Response to: Client 4 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:01.92839 UTC | Type: DELETE | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:01.928397 UTC | Content: DELETE Response: Client 3 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:02.005453 UTC | Type: GET | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.005461 UTC | Content: GET Response to: Client 5 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - 46VI4lub7O
+Request Requeued: 2025-01-15 16:47:02.089509 UTC | Type: DELETE | Content: Client 3 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:02.089509 UTC | Type: DELETE | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.089739 UTC | Content: DELETE Response: Client 3 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - q69L0xBG9y
+Request Requeued: 2025-01-15 16:47:02.100827 UTC | Type: GET | Content: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:02.100827 UTC | Type: GET | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.10102 UTC | Content: GET Response to: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.117145 UTC | Type: DELETE | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.117152 UTC | Content: DELETE Response: Client 7 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.118278 UTC | Type: POST | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.118307 UTC | Content: POST Response to: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:02.137889 UTC | Type: GET | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.13791 UTC | Content: GET Response to: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - 46VI4lub7O
+Request Requeued: 2025-01-15 16:47:02.254935 UTC | Type: DELETE | Content: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:02.254935 UTC | Type: DELETE | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.255176 UTC | Content: DELETE Response: Client 2 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:02.434455 UTC | Type: DELETE | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.434519 UTC | Content: DELETE Response: Client 6 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:02.434464 UTC | Type: POST | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.435187 UTC | Content: POST Response to: Client 3 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.434467 UTC | Type: DELETE | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.435301 UTC | Content: DELETE Response: Client 2 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:02.434462 UTC | Type: POST | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.435448 UTC | Content: POST Response to: Client 4 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.434472 UTC | Type: POST | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.435527 UTC | Content: POST Response to: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:02.434473 UTC | Type: POST | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.435585 UTC | Content: POST Response to: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:02.434473 UTC | Type: GET | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.435638 UTC | Content: GET Response to: Client 8 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.434497 UTC | Type: POST | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.435713 UTC | Content: POST Response to: Client 10 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:02.443486 UTC | Type: DELETE | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.443497 UTC | Content: DELETE Response: Client 5 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:02.545873 UTC | Type: GET | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.54588 UTC | Content: GET Response to: Client 10 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:02.560861 UTC | Type: GET | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.56099 UTC | Content: GET Response to: Client 7 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:02.568762 UTC | Type: POST | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.568782 UTC | Content: POST Response to: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:02.618329 UTC | Type: GET | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.618338 UTC | Content: GET Response to: Client 6 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:02.626276 UTC | Type: GET | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.626288 UTC | Content: GET Response to: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.646568 UTC | Type: POST | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.646577 UTC | Content: POST Response to: Client 3 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:02.663584 UTC | Type: GET | Content: Client 5 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.663584 UTC | Type: GET | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.663768 UTC | Content: GET Response to: Client 5 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:02.728563 UTC | Type: DELETE | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.728571 UTC | Content: DELETE Response: Client 6 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:02.816639 UTC | Type: GET | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.816655 UTC | Content: GET Response to: Client 3 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:02.849077 UTC | Type: POST | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.84918 UTC | Content: POST Response to: Client 8 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:02.864837 UTC | Type: DELETE | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.8649 UTC | Content: DELETE Response: Client 4 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:02.888716 UTC | Type: DELETE | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.88881 UTC | Content: DELETE Response: Client 1 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:02.913063 UTC | Type: DELETE | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.913078 UTC | Content: DELETE Response: Client 10 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:02.950748 UTC | Type: POST | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.950762 UTC | Content: POST Response to: Client 7 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.982031 UTC | Type: GET | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.982047 UTC | Content: GET Response to: Client 8 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:02.992393 UTC | Type: DELETE | Content: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:02.992393 UTC | Type: DELETE | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:02.992556 UTC | Content: DELETE Response: Client 2 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - q69L0xBG9y
+Request Requeued: 2025-01-15 16:47:03.011428 UTC | Type: DELETE | Content: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:03.011428 UTC | Type: DELETE | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.011615 UTC | Content: DELETE Response: Client 9 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:03.067559 UTC | Type: DELETE | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.067581 UTC | Content: DELETE Response: Client 5 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - mdUfIXhQrc
+Request Requeued: 2025-01-15 16:47:03.135428 UTC | Type: DELETE | Content: Client 8 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:03.135428 UTC | Type: DELETE | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.13565 UTC | Content: DELETE Response: Client 8 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - XdBE3lesjh
+Request Requeued: 2025-01-15 16:47:03.147319 UTC | Type: POST | Content: Client 3 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:03.147319 UTC | Type: POST | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.147498 UTC | Content: POST Response to: Client 3 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:03.158929 UTC | Type: DELETE | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.158956 UTC | Content: DELETE Response: Client 4 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:03.185915 UTC | Type: GET | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.18593 UTC | Content: GET Response to: Client 6 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:03.201957 UTC | Type: POST | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.20198 UTC | Content: POST Response to: Client 7 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:03.322682 UTC | Type: POST | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.322703 UTC | Content: POST Response to: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:03.715816 UTC | Type: GET | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.715876 UTC | Content: GET Response to: Client 5 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:03.715826 UTC | Type: DELETE | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.716503 UTC | Content: DELETE Response: Client 3 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:03.715831 UTC | Type: POST | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.716594 UTC | Content: POST Response to: Client 6 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:03.715838 UTC | Type: DELETE | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.716862 UTC | Content: DELETE Response: Client 8 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:03.715838 UTC | Type: POST | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.717004 UTC | Content: POST Response to: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:03.715846 UTC | Type: DELETE | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.717077 UTC | Content: DELETE Response: Client 7 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - q69L0xBG9y
+Request Requeued: 2025-01-15 16:47:03.715847 UTC | Type: GET | Content: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:03.715847 UTC | Type: DELETE | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.717282 UTC | Content: DELETE Response: Client 10 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - q69L0xBG9y
+Request Requeued: 2025-01-15 16:47:03.715852 UTC | Type: DELETE | Content: Client 4 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:03.715847 UTC | Type: GET | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.71744 UTC | Content: GET Response to: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:03.715852 UTC | Type: DELETE | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.717513 UTC | Content: DELETE Response: Client 4 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:03.820732 UTC | Type: DELETE | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.820746 UTC | Content: DELETE Response: Client 1 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:03.847901 UTC | Type: GET | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.847917 UTC | Content: GET Response to: Client 7 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:03.894918 UTC | Type: DELETE | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.894926 UTC | Content: DELETE Response: Client 4 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:03.977268 UTC | Type: GET | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:03.977279 UTC | Content: GET Response to: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - XdBE3lesjh
+Request Requeued: 2025-01-15 16:47:04.03084 UTC | Type: POST | Content: Client 10 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:04.03084 UTC | Type: POST | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.031076 UTC | Content: POST Response to: Client 10 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:04.033138 UTC | Type: POST | Content: Client 8 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.033143 UTC | Content: POST Response to: Client 8 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:04.083167 UTC | Type: POST | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.083174 UTC | Content: POST Response to: Client 5 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:04.085917 UTC | Type: GET | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.085931 UTC | Content: GET Response to: Client 7 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:04.153451 UTC | Type: GET | Content: Client 2 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.153466 UTC | Content: GET Response to: Client 2 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:04.165536 UTC | Type: POST | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.165564 UTC | Content: POST Response to: Client 10 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:04.178853 UTC | Type: DELETE | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.178955 UTC | Content: DELETE Response: Client 9 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:04.204884 UTC | Type: DELETE | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.204891 UTC | Content: DELETE Response: Client 6 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:04.206071 UTC | Type: DELETE | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.206073 UTC | Content: DELETE Response: Client 3 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:04.324862 UTC | Type: POST | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.324869 UTC | Content: POST Response to: Client 6 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:04.329386 UTC | Type: POST | Content: Client 1 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.329391 UTC | Content: POST Response to: Client 1 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - XdBE3lesjh
+--------------------------------------------------
+Authenticated Token: XdBE3lesjh
+Request: 2025-01-15 16:47:04.33419 UTC | Type: DELETE | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.334195 UTC | Content: DELETE Response: Client 4 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:04.389247 UTC | Type: DELETE | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.389254 UTC | Content: DELETE Response: Client 5 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:04.41117 UTC | Type: POST | Content: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - AOWu2gMEgI
+Request Requeued: 2025-01-15 16:47:04.41117 UTC | Type: POST | Content: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:04.41117 UTC | Type: POST | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.41146 UTC | Content: POST Response to: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:04.496217 UTC | Type: POST | Content: Client 6 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.496227 UTC | Content: POST Response to: Client 6 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - q69L0xBG9y
+--------------------------------------------------
+Authenticated Token: q69L0xBG9y
+Request: 2025-01-15 16:47:04.526998 UTC | Type: GET | Content: Client 5 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.527022 UTC | Content: GET Response to: Client 5 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:04.526998 UTC | Type: GET | Content: Client 7 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.527269 UTC | Content: GET Response to: Client 7 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - AOWu2gMEgI
+--------------------------------------------------
+Authenticated Token: AOWu2gMEgI
+Request: 2025-01-15 16:47:04.577466 UTC | Type: POST | Content: Client 10 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.577492 UTC | Content: POST Response to: Client 10 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:04.589152 UTC | Type: DELETE | Content: Client 4 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.589157 UTC | Content: DELETE Response: Client 4 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Authentication Successful: Token - 46VI4lub7O
+--------------------------------------------------
+Authenticated Token: 46VI4lub7O
+Request: 2025-01-15 16:47:04.658741 UTC | Type: POST | Content: Client 3 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.658757 UTC | Content: POST Response to: Client 3 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Failed (Retry): Token - mdUfIXhQrc
+Request Requeued: 2025-01-15 16:47:04.781008 UTC | Type: DELETE | Content: Client 9 says he/she loves Functional Programming!
+--------------------------------------------------
+
+Authentication Successful: Token - mdUfIXhQrc
+--------------------------------------------------
+Authenticated Token: mdUfIXhQrc
+Request: 2025-01-15 16:47:04.781008 UTC | Type: DELETE | Content: Client 9 says he/she loves Functional Programming!
+Response: 2025-01-15 16:47:04.7813 UTC | Content: DELETE Response: Client 9 says he/she loves Functional Programming! has been deleted
+--------------------------------------------------
+
+Final Summary: Total Requests Processed = 100
