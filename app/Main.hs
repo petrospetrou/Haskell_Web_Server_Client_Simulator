@@ -24,5 +24,5 @@ waitForCompletion counter = do
     count <- readMVar counter
     -- | Process exactly 100 request then exit
     when (count < 100) $ do
-        threadDelay 100000  -- Check every 100ms
+        threadDelay 100000
         waitForCompletion counter
