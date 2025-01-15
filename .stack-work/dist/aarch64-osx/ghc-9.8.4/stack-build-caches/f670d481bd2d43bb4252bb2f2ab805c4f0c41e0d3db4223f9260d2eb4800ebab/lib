@@ -1,7 +1,7 @@
 /Users/petros/.ghcup/ghc/9.8.4/lib/ghc-9.8.4/lib/aarch64-osx-ghc-9.8.4/rts-1.0.2/include/ghcversion.h:
   hash: 95162794a3bf5e6167631fdd41a509846597231d523d0f21a76713b1f801373c
 ? /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/autogen/Paths_haskell_individual_coursework.hs
-: hash: 7f25ff99298c9674bf3c22c2513d9a32b1dbf1f474e8cf0cedede1b42133c57e
+: hash: 672835bbf91c7005adc21a1532be9e1e62a85bd367b53d89dcfa1cf364676014
 ? /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/.stack-work/dist/aarch64-osx/ghc-9.8.4/build/autogen/cabal_macros.h
 : hash: d748654fee7d876fea9e98228d9a1a0e150cd7fdefea0516a92ad0c39e98e445
 /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/CHANGELOG.md:
@@ -9,16 +9,14 @@
 /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/README.md:
   hash: 81c99807c7f77c5099e4b636947bf6ce8d25da2d944caff7171f2cea7e098bdf
 /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/haskell-individual-coursework.cabal:
-  hash: 8fa6a1ea01657de94d1f9ec50273a671d5982b150ee65368484e88785e6304a8
+  hash: 6a8af8e21f1706918a1cba10670eea992cac3c9327384f2b6088ecdd5ab4fa66
 /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/package.yaml:
-  hash: 93438c83779f888fbf90ab82d5968bf8920005a95406f2e74f07ac577124bf42
+  hash: 60c5cece4c6a07dff54d66d45848b70708079bb0e37401cd2f604851f9d4d1a5
 /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/src/Client.hs:
-  hash: f3bd519fcc333031040c97e120101f2b0ddb37e1b661b3a3ce80cc416dcc2d4a
-/Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/src/Lib.hs:
-  hash: 11d6d255cb397fa45980eb516ea685146565d9de2108c4eea356ea41db8364be
+  hash: 3b568000ea81fb6e11a3b96819385aa5e5c14f25d680f17a206b8ef66a9a751a
 /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/src/Log.hs:
-  hash: 6aa5c9a115030cb519828a56d45a7d601467c2480c3de5adba5053839ca5bed4
+  hash: 6cad3adf1df52b2bde302b59a13debe839bb5355d73adb890fdec5d8d3dff799
 /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/src/Server.hs:
-  hash: 8cf02267c125c23c5ed1777c88c27f6d1a5f02ca6d9359535a9bcc2e752dd963
+  hash: a9e327c342a24b690a38b7fb367a901c976d0027e61c4e0d4e39bbc1434d3bda
 /Users/petros/MSc Computer Science/ECS 713 Functional Programming/Individual/src/Types.hs:
-  hash: 08914518f9e11d5a98bd750956fc00b7757ec072b480525b2c253a841e8b308a
+  hash: ce82507c204d2599a43ca379cf4e7ed163fde9cf3baf6b3fbc247307a4ad0162

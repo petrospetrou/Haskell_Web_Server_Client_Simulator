@@ -6,7 +6,7 @@ cabal-version: 2.2
 
 name:           haskell-individual-coursework
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-individual-coursework#readme>
+description:    Please see the README on GitHub at <https://github.com/petrospetrou/haskell-individual-coursework>
 homepage:       https://github.com/githubuser/haskell-individual-coursework#readme
 bug-reports:    https://github.com/githubuser/haskell-individual-coursework/issues
 author:         Author name here

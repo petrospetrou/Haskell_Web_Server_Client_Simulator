@@ -1,27 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Log</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Log.html#logResponse"><span class="hs-identifier">logResponse</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Log</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Log.html#logResponse"><span class="hs-identifier">logResponse</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Log.html#logUnauthorized"><span class="hs-identifier">logUnauthorized</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Log.html#logAuthSuccess"><span class="hs-identifier">logAuthSuccess</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Log.html#logAuthRetry"><span class="hs-identifier">logAuthRetry</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Log.html#logFinalCount"><span class="hs-identifier">logFinalCount</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
 </span><span id="line-2"></span><span>
 </span><span id="line-3"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">System.IO</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">withFile</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">IOMode</span></span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">AppendMode</span></span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">hPutStrLn</span></span><span class="hs-special">)</span><span>
 </span><span id="line-4"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Types.html"><span class="hs-identifier">Types</span></a></span><span>
 </span><span id="line-5"></span><span>
-</span><span id="line-6"></span><span class="annot"><span class="hs-comment">-- | Function that handles the Log Requests and Responses</span></span><span>
+</span><span id="line-6"></span><span class="annot"><span class="hs-comment">-- | Function to log successful request-response pairs</span></span><span>
 </span><span id="line-7"></span><span class="annot"><a href="Log.html#logResponse"><span class="hs-identifier hs-type">logResponse</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><a href="Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
 </span><span id="line-8"></span><span id="logResponse"><span class="annot"><span class="annottext">logResponse :: Request -&gt; Response -&gt; IO ()
-</span><a href="Log.html#logResponse"><span class="hs-identifier hs-var hs-var">logResponse</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span id="local-6989586621679048968"><span class="annot"><span class="annottext">UTCTime
-</span><a href="#local-6989586621679048968"><span class="hs-identifier hs-var">reqTime</span></a></span></span><span> </span><span id="local-6989586621679048969"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679048969"><span class="hs-identifier hs-var">reqContent</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span> </span><span id="local-6989586621679048971"><span class="annot"><span class="annottext">UTCTime
-</span><a href="#local-6989586621679048971"><span class="hs-identifier hs-var">resTime</span></a></span></span><span> </span><span id="local-6989586621679048972"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679048972"><span class="hs-identifier hs-var">resContent</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><a href="Log.html#logResponse"><span class="hs-identifier hs-var hs-var">logResponse</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span id="local-6989586621679050114"><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050114"><span class="hs-identifier hs-var">reqTime</span></a></span></span><span> </span><span id="local-6989586621679050115"><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050115"><span class="hs-identifier hs-var">reqType</span></a></span></span><span> </span><span id="local-6989586621679050116"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050116"><span class="hs-identifier hs-var">reqContent</span></a></span></span><span> </span><span id="local-6989586621679050117"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050117"><span class="hs-identifier hs-var">token</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span> </span><span id="local-6989586621679050119"><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050119"><span class="hs-identifier hs-var">resTime</span></a></span></span><span> </span><span id="local-6989586621679050120"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050120"><span class="hs-identifier hs-var">resContent</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
 </span><span id="line-9"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; IOMode -&gt; (Handle -&gt; IO ()) -&gt; IO ()
 forall r. String -&gt; IOMode -&gt; (Handle -&gt; IO r) -&gt; IO r
 </span><span class="hs-identifier hs-var">withFile</span></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;requests.log&quot;</span></span><span> </span><span class="annot"><span class="annottext">IOMode
 </span><span class="hs-identifier hs-var">AppendMode</span></span><span> </span><span class="annot"><span class="annottext">((Handle -&gt; IO ()) -&gt; IO ()) -&gt; (Handle -&gt; IO ()) -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679048973"><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679048973"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679050121"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050121"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
 </span><span id="line-10"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
 </span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679048973"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621679050121"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;Authenticated Token: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050117"><span class="hs-identifier hs-var">token</span></a></span><span>
+</span><span id="line-11"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050121"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Request: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
@@ -29,16 +40,24 @@ forall a. [a] -&gt; [a] -&gt; [a]
 </span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">UTCTime -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><span class="hs-identifier hs-var">show</span></span><span> </span><span class="annot"><span class="annottext">UTCTime
-</span><a href="#local-6989586621679048968"><span class="hs-identifier hs-var">reqTime</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679050114"><span class="hs-identifier hs-var">reqTime</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
-</span><span class="hs-string">&quot; - &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><span class="hs-string">&quot; | Type: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">RequestType -&gt; String
+forall a. Show a =&gt; a -&gt; String
+</span><span class="hs-identifier hs-var">show</span></span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050115"><span class="hs-identifier hs-var">reqType</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679048969"><span class="hs-identifier hs-var">reqContent</span></a></span><span>
-</span><span id="line-11"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-string">&quot; | Content: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050116"><span class="hs-identifier hs-var">reqContent</span></a></span><span>
+</span><span id="line-12"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
 </span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
-</span><a href="#local-6989586621679048973"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+</span><a href="#local-6989586621679050121"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">String
 </span><span class="hs-string">&quot;Response: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
@@ -46,10 +65,206 @@ forall a. [a] -&gt; [a] -&gt; [a]
 </span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">UTCTime -&gt; String
 forall a. Show a =&gt; a -&gt; String
 </span><span class="hs-identifier hs-var">show</span></span><span> </span><span class="annot"><span class="annottext">UTCTime
-</span><a href="#local-6989586621679048971"><span class="hs-identifier hs-var">resTime</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><a href="#local-6989586621679050119"><span class="hs-identifier hs-var">resTime</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
-</span><span class="hs-string">&quot; - &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><span class="hs-string">&quot; | Content: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679048972"><span class="hs-identifier hs-var">resContent</span></a></span></pre></body></html>
+</span><a href="#local-6989586621679050120"><span class="hs-identifier hs-var">resContent</span></a></span><span>
+</span><span id="line-13"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050121"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+forall a. Int -&gt; a -&gt; [a]
+</span><span class="hs-identifier hs-var">replicate</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">50</span></span><span> </span><span class="annot"><span class="annottext">Char
+</span><span class="hs-char">'-'</span></span><span>
+</span><span id="line-14"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050121"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;&quot;</span></span><span>
+</span><span id="line-15"></span><span>
+</span><span id="line-16"></span><span class="annot"><span class="hs-comment">-- | Function to log unauthorized requests</span></span><span>
+</span><span id="line-17"></span><span class="annot"><a href="Log.html#logUnauthorized"><span class="hs-identifier hs-type">logUnauthorized</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-18"></span><span id="logUnauthorized"><span class="annot"><span class="annottext">logUnauthorized :: Request -&gt; IO ()
+</span><a href="Log.html#logUnauthorized"><span class="hs-identifier hs-var hs-var">logUnauthorized</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span id="local-6989586621679050124"><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050124"><span class="hs-identifier hs-var">reqTime</span></a></span></span><span> </span><span id="local-6989586621679050125"><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050125"><span class="hs-identifier hs-var">reqType</span></a></span></span><span> </span><span id="local-6989586621679050126"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050126"><span class="hs-identifier hs-var">reqContent</span></a></span></span><span> </span><span id="local-6989586621679050127"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050127"><span class="hs-identifier hs-var">token</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-19"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; IOMode -&gt; (Handle -&gt; IO ()) -&gt; IO ()
+forall r. String -&gt; IOMode -&gt; (Handle -&gt; IO r) -&gt; IO r
+</span><span class="hs-identifier hs-var">withFile</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;requests.log&quot;</span></span><span> </span><span class="annot"><span class="annottext">IOMode
+</span><span class="hs-identifier hs-var">AppendMode</span></span><span> </span><span class="annot"><span class="annottext">((Handle -&gt; IO ()) -&gt; IO ()) -&gt; (Handle -&gt; IO ()) -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679050128"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050128"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-20"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050128"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;Unauthorized Request: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">UTCTime -&gt; String
+forall a. Show a =&gt; a -&gt; String
+</span><span class="hs-identifier hs-var">show</span></span><span> </span><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050124"><span class="hs-identifier hs-var">reqTime</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot; | Type: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">RequestType -&gt; String
+forall a. Show a =&gt; a -&gt; String
+</span><span class="hs-identifier hs-var">show</span></span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050125"><span class="hs-identifier hs-var">reqType</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot; | Content: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050126"><span class="hs-identifier hs-var">reqContent</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot; | Token: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050127"><span class="hs-identifier hs-var">token</span></a></span><span>
+</span><span id="line-21"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050128"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+forall a. Int -&gt; a -&gt; [a]
+</span><span class="hs-identifier hs-var">replicate</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">50</span></span><span> </span><span class="annot"><span class="annottext">Char
+</span><span class="hs-char">'-'</span></span><span>
+</span><span id="line-22"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050128"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;&quot;</span></span><span>
+</span><span id="line-23"></span><span>
+</span><span id="line-24"></span><span class="annot"><span class="hs-comment">-- | Function to log successful authentication</span></span><span>
+</span><span id="line-25"></span><span class="annot"><a href="Log.html#logAuthSuccess"><span class="hs-identifier hs-type">logAuthSuccess</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">String</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-26"></span><span id="logAuthSuccess"><span class="annot"><span class="annottext">logAuthSuccess :: String -&gt; IO ()
+</span><a href="Log.html#logAuthSuccess"><span class="hs-identifier hs-var hs-var">logAuthSuccess</span></a></span></span><span> </span><span id="local-6989586621679050129"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050129"><span class="hs-identifier hs-var">token</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-27"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; IOMode -&gt; (Handle -&gt; IO ()) -&gt; IO ()
+forall r. String -&gt; IOMode -&gt; (Handle -&gt; IO r) -&gt; IO r
+</span><span class="hs-identifier hs-var">withFile</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;requests.log&quot;</span></span><span> </span><span class="annot"><span class="annottext">IOMode
+</span><span class="hs-identifier hs-var">AppendMode</span></span><span> </span><span class="annot"><span class="annottext">((Handle -&gt; IO ()) -&gt; IO ()) -&gt; (Handle -&gt; IO ()) -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679050130"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050130"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-28"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050130"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;Authentication Successful: Token - &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050129"><span class="hs-identifier hs-var">token</span></a></span><span>
+</span><span id="line-29"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050130"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+forall a. Int -&gt; a -&gt; [a]
+</span><span class="hs-identifier hs-var">replicate</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">50</span></span><span> </span><span class="annot"><span class="annottext">Char
+</span><span class="hs-char">'-'</span></span><span>
+</span><span id="line-30"></span><span>
+</span><span id="line-31"></span><span class="annot"><span class="hs-comment">-- | Function to log retries for failed authentication</span></span><span>
+</span><span id="line-32"></span><span class="annot"><a href="Log.html#logAuthRetry"><span class="hs-identifier hs-type">logAuthRetry</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-33"></span><span id="logAuthRetry"><span class="annot"><span class="annottext">logAuthRetry :: Request -&gt; IO ()
+</span><a href="Log.html#logAuthRetry"><span class="hs-identifier hs-var hs-var">logAuthRetry</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span id="local-6989586621679050131"><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050131"><span class="hs-identifier hs-var">reqTime</span></a></span></span><span> </span><span id="local-6989586621679050132"><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050132"><span class="hs-identifier hs-var">reqType</span></a></span></span><span> </span><span id="local-6989586621679050133"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050133"><span class="hs-identifier hs-var">reqContent</span></a></span></span><span> </span><span id="local-6989586621679050134"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050134"><span class="hs-identifier hs-var">token</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-34"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; IOMode -&gt; (Handle -&gt; IO ()) -&gt; IO ()
+forall r. String -&gt; IOMode -&gt; (Handle -&gt; IO r) -&gt; IO r
+</span><span class="hs-identifier hs-var">withFile</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;requests.log&quot;</span></span><span> </span><span class="annot"><span class="annottext">IOMode
+</span><span class="hs-identifier hs-var">AppendMode</span></span><span> </span><span class="annot"><span class="annottext">((Handle -&gt; IO ()) -&gt; IO ()) -&gt; (Handle -&gt; IO ()) -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679050135"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050135"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-35"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050135"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;Authentication Failed (Retry): Token - &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050134"><span class="hs-identifier hs-var">token</span></a></span><span>
+</span><span id="line-36"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050135"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;Request Requeued: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">UTCTime -&gt; String
+forall a. Show a =&gt; a -&gt; String
+</span><span class="hs-identifier hs-var">show</span></span><span> </span><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050131"><span class="hs-identifier hs-var">reqTime</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot; | Type: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">RequestType -&gt; String
+forall a. Show a =&gt; a -&gt; String
+</span><span class="hs-identifier hs-var">show</span></span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050132"><span class="hs-identifier hs-var">reqType</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot; | Content: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050133"><span class="hs-identifier hs-var">reqContent</span></a></span><span>
+</span><span id="line-37"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050135"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Char -&gt; String
+forall a. Int -&gt; a -&gt; [a]
+</span><span class="hs-identifier hs-var">replicate</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">50</span></span><span> </span><span class="annot"><span class="annottext">Char
+</span><span class="hs-char">'-'</span></span><span>
+</span><span id="line-38"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050135"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;&quot;</span></span><span>
+</span><span id="line-39"></span><span>
+</span><span id="line-40"></span><span class="annot"><span class="hs-comment">-- | Function to log the final request count</span></span><span>
+</span><span id="line-41"></span><span class="annot"><a href="Log.html#logFinalCount"><span class="hs-identifier hs-type">logFinalCount</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Int</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-42"></span><span id="logFinalCount"><span class="annot"><span class="annottext">logFinalCount :: Int -&gt; IO ()
+</span><a href="Log.html#logFinalCount"><span class="hs-identifier hs-var hs-var">logFinalCount</span></a></span></span><span> </span><span id="local-6989586621679050136"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050136"><span class="hs-identifier hs-var">count</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-43"></span><span>    </span><span class="annot"><span class="annottext">String -&gt; IOMode -&gt; (Handle -&gt; IO ()) -&gt; IO ()
+forall r. String -&gt; IOMode -&gt; (Handle -&gt; IO r) -&gt; IO r
+</span><span class="hs-identifier hs-var">withFile</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;requests.log&quot;</span></span><span> </span><span class="annot"><span class="annottext">IOMode
+</span><span class="hs-identifier hs-var">AppendMode</span></span><span> </span><span class="annot"><span class="annottext">((Handle -&gt; IO ()) -&gt; IO ()) -&gt; (Handle -&gt; IO ()) -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679050137"><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050137"><span class="hs-identifier hs-var">h</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-44"></span><span>        </span><span class="annot"><span class="annottext">Handle -&gt; String -&gt; IO ()
+</span><span class="hs-identifier hs-var">hPutStrLn</span></span><span> </span><span class="annot"><span class="annottext">Handle
+</span><a href="#local-6989586621679050137"><span class="hs-identifier hs-var">h</span></a></span><span> </span><span class="annot"><span class="annottext">(String -&gt; IO ()) -&gt; String -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;Final Summary: Total Requests Processed = &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">Int -&gt; String
+forall a. Show a =&gt; a -&gt; String
+</span><span class="hs-identifier hs-var">show</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050136"><span class="hs-identifier hs-var">count</span></a></span><span>
+</span><span id="line-45"></span></pre></body></html>

@@ -2,101 +2,183 @@
 </span><span id="line-2"></span><span>
 </span><span id="line-3"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">Control.Concurrent</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">MVar</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">modifyMVar_</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">readMVar</span></span><span class="hs-special">)</span><span>
 </span><span id="line-4"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">Control.Monad</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">when</span></span><span class="hs-special">)</span><span>
-</span><span id="line-5"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Types.html"><span class="hs-identifier">Types</span></a></span><span>
-</span><span id="line-6"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Log.html"><span class="hs-identifier">Log</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Log.html#logResponse"><span class="hs-identifier">logResponse</span></a></span><span class="hs-special">)</span><span>
-</span><span id="line-7"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">Data.Time</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">getCurrentTime</span></span><span class="hs-special">)</span><span>
-</span><span id="line-8"></span><span>
-</span><span id="line-9"></span><span class="annot"><span class="hs-comment">-- | Function that processes the requests and generates a response</span></span><span>
-</span><span id="line-10"></span><span class="annot"><a href="Server.html#processRequest"><span class="hs-identifier hs-type">processRequest</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="annot"><a href="Types.html#Response"><span class="hs-identifier hs-type">Response</span></a></span><span>
-</span><span id="line-11"></span><span id="processRequest"><span class="annot"><span class="annottext">processRequest :: Request -&gt; IO Response
-</span><a href="Server.html#processRequest"><span class="hs-identifier hs-var hs-var">processRequest</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span id="local-6989586621679049003"><span class="annot"><span class="annottext">UTCTime
-</span><a href="#local-6989586621679049003"><span class="hs-identifier hs-var">requestTime</span></a></span></span><span> </span><span id="local-6989586621679049004"><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679049004"><span class="hs-identifier hs-var">content</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-12"></span><span>    </span><span id="local-6989586621679049005"><span class="annot"><span class="annottext">UTCTime
-</span><a href="#local-6989586621679049005"><span class="hs-identifier hs-var">responseTime</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO UTCTime
+</span><span id="line-5"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">System.Random</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">randomRIO</span></span><span class="hs-special">)</span><span>
+</span><span id="line-6"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Types.html"><span class="hs-identifier">Types</span></a></span><span>
+</span><span id="line-7"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><a href="Log.html"><span class="hs-identifier">Log</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Log.html#logResponse"><span class="hs-identifier">logResponse</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Log.html#logUnauthorized"><span class="hs-identifier">logUnauthorized</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Log.html#logAuthSuccess"><span class="hs-identifier">logAuthSuccess</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Log.html#logAuthRetry"><span class="hs-identifier">logAuthRetry</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Log.html#logFinalCount"><span class="hs-identifier">logFinalCount</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-8"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">Data.Time</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">getCurrentTime</span></span><span class="hs-special">)</span><span>
+</span><span id="line-9"></span><span>
+</span><span id="line-10"></span><span class="annot"><span class="hs-comment">-- | Function that processes the requests and generates a response</span></span><span>
+</span><span id="line-11"></span><span class="annot"><a href="Server.html#processRequest"><span class="hs-identifier hs-type">processRequest</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="annot"><span class="hs-identifier hs-type">Bool</span></span><span>
+</span><span id="line-12"></span><span id="processRequest"><span class="annot"><span class="annottext">processRequest :: Request -&gt; IO Bool
+</span><a href="Server.html#processRequest"><span class="hs-identifier hs-var hs-var">processRequest</span></a></span></span><span> </span><span class="hs-special">(</span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span> </span><span id="local-6989586621679050199"><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050199"><span class="hs-identifier hs-var">reqTime</span></a></span></span><span> </span><span id="local-6989586621679050200"><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050200"><span class="hs-identifier hs-var">reqType</span></a></span></span><span> </span><span id="local-6989586621679050201"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050201"><span class="hs-identifier hs-var">content</span></a></span></span><span> </span><span id="local-6989586621679050202"><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050202"><span class="hs-identifier hs-var">token</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-13"></span><span>    </span><span id="local-6989586621679050203"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050203"><span class="hs-identifier hs-var">authResult</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; IO Int
+forall a (m :: * -&gt; *). (Random a, MonadIO m) =&gt; (a, a) -&gt; m a
+</span><span class="hs-identifier hs-var">randomRIO</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">1</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Int</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">100</span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">Int</span></span><span class="hs-special">)</span><span>  </span><span class="hs-comment">-- Random number between 1 and 100</span><span>
+</span><span id="line-14"></span><span>    </span><span id="local-6989586621679050204"><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050204"><span class="hs-identifier hs-var">responseTime</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">IO UTCTime
 </span><span class="hs-identifier hs-var">getCurrentTime</span></span><span>
-</span><span id="line-13"></span><span>    </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679049006"><span class="annot"><span class="annottext">responseContent :: String
-</span><a href="#local-6989586621679049006"><span class="hs-identifier hs-var hs-var">responseContent</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">String
-</span><span class="hs-string">&quot;Response to: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+</span><span id="line-15"></span><span>
+</span><span id="line-16"></span><span>    </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050203"><span class="hs-identifier hs-var">authResult</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+forall a. Ord a =&gt; a -&gt; a -&gt; Bool
+</span><span class="hs-operator hs-var">&gt;</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">20</span></span><span> </span><span class="annot"><span class="annottext">Bool -&gt; Bool -&gt; Bool
+</span><span class="hs-operator hs-var">&amp;&amp;</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050202"><span class="hs-identifier hs-var">token</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; [String] -&gt; Bool
+forall a. Eq a =&gt; a -&gt; [a] -&gt; Bool
+forall (t :: * -&gt; *) a. (Foldable t, Eq a) =&gt; a -&gt; t a -&gt; Bool
+</span><span class="hs-operator hs-var">`elem`</span></span><span> </span><span class="annot"><span class="annottext">[String]
+</span><a href="Types.html#validTokens"><span class="hs-identifier hs-var">validTokens</span></a></span><span>
+</span><span id="line-17"></span><span>        </span><span class="hs-keyword">then</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-18"></span><span>            </span><span class="annot"><span class="annottext">String -&gt; IO ()
+</span><a href="Log.html#logAuthSuccess"><span class="hs-identifier hs-var">logAuthSuccess</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050202"><span class="hs-identifier hs-var">token</span></a></span><span>  </span><span class="hs-comment">-- Log successful authentication</span><span>
+</span><span id="line-19"></span><span>            </span><span class="hs-keyword">let</span><span> </span><span id="local-6989586621679050209"><span class="annot"><span class="annottext">responseText :: String
+</span><a href="#local-6989586621679050209"><span class="hs-identifier hs-var hs-var">responseText</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050200"><span class="hs-identifier hs-var">reqType</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-20"></span><span>                    </span><span class="annot"><span class="annottext">RequestType
+</span><a href="Types.html#GET"><span class="hs-identifier hs-var">GET</span></a></span><span>    </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;GET Response to: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
 forall a. [a] -&gt; [a] -&gt; [a]
 </span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679049004"><span class="hs-identifier hs-var">content</span></a></span><span>
-</span><span id="line-14"></span><span>    </span><span class="annot"><span class="annottext">Response -&gt; IO Response
+</span><a href="#local-6989586621679050201"><span class="hs-identifier hs-var">content</span></a></span><span>
+</span><span id="line-21"></span><span>                    </span><span class="annot"><span class="annottext">RequestType
+</span><a href="Types.html#POST"><span class="hs-identifier hs-var">POST</span></a></span><span>   </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;POST Response to: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050201"><span class="hs-identifier hs-var">content</span></a></span><span>
+</span><span id="line-22"></span><span>                    </span><span class="annot"><span class="annottext">RequestType
+</span><a href="Types.html#DELETE"><span class="hs-identifier hs-var">DELETE</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;DELETE Response: &quot;</span></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050201"><span class="hs-identifier hs-var">content</span></a></span><span> </span><span class="annot"><span class="annottext">String -&gt; String -&gt; String
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot; has been deleted&quot;</span></span><span>
+</span><span id="line-23"></span><span>            </span><span class="annot"><span class="annottext">Request -&gt; Response -&gt; IO ()
+</span><a href="Log.html#logResponse"><span class="hs-identifier hs-var">logResponse</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">UTCTime -&gt; RequestType -&gt; String -&gt; String -&gt; Request
+</span><a href="Types.html#Request"><span class="hs-identifier hs-var">Request</span></a></span><span> </span><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050199"><span class="hs-identifier hs-var">reqTime</span></a></span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050200"><span class="hs-identifier hs-var">reqType</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050201"><span class="hs-identifier hs-var">content</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050202"><span class="hs-identifier hs-var">token</span></a></span><span class="hs-special">)</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">UTCTime -&gt; String -&gt; Response
+</span><a href="Types.html#Response"><span class="hs-identifier hs-var">Response</span></a></span><span> </span><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050204"><span class="hs-identifier hs-var">responseTime</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050209"><span class="hs-identifier hs-var">responseText</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-24"></span><span>            </span><span class="annot"><span class="annottext">Bool -&gt; IO Bool
 forall a. a -&gt; IO a
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
-</span><span class="hs-identifier hs-var">return</span></span><span> </span><span class="annot"><span class="annottext">(Response -&gt; IO Response) -&gt; Response -&gt; IO Response
-forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="annot"><span class="annottext">UTCTime -&gt; String -&gt; Response
-</span><a href="Types.html#Response"><span class="hs-identifier hs-var">Response</span></a></span><span> </span><span class="annot"><span class="annottext">UTCTime
-</span><a href="#local-6989586621679049005"><span class="hs-identifier hs-var">responseTime</span></a></span><span> </span><span class="annot"><span class="annottext">String
-</span><a href="#local-6989586621679049006"><span class="hs-identifier hs-var">responseContent</span></a></span><span>
-</span><span id="line-15"></span><span>
-</span><span id="line-16"></span><span class="annot"><span class="hs-comment">-- | Function that simulates the Web Server</span></span><span>
-</span><span id="line-17"></span><span class="annot"><a href="Server.html#server"><span class="hs-identifier hs-type">server</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Types.html#RequestQueue"><span class="hs-identifier hs-type">RequestQueue</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">MVar</span></span><span> </span><span class="annot"><span class="hs-identifier hs-type">Int</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
-</span><span id="line-18"></span><span id="server"><span class="annot"><span class="annottext">server :: RequestQueue -&gt; MVar Int -&gt; IO ()
-</span><a href="Server.html#server"><span class="hs-identifier hs-var hs-var">server</span></a></span></span><span> </span><span id="local-6989586621679049008"><span class="annot"><span class="annottext">RequestQueue
-</span><a href="#local-6989586621679049008"><span class="hs-identifier hs-var">queue</span></a></span></span><span> </span><span id="local-6989586621679049009"><span class="annot"><span class="annottext">MVar Int
-</span><a href="#local-6989586621679049009"><span class="hs-identifier hs-var">counter</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO ()
-</span><a href="#local-6989586621679049010"><span class="hs-identifier hs-var">processRequests</span></a></span><span>
-</span><span id="line-19"></span><span>  </span><span class="hs-keyword">where</span><span>
-</span><span id="line-20"></span><span>    </span><span id="local-6989586621679049010"><span class="annot"><span class="annottext">processRequests :: IO ()
-</span><a href="#local-6989586621679049010"><span class="hs-identifier hs-var hs-var">processRequests</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-21"></span><span>        </span><span id="local-6989586621679049027"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679049027"><span class="hs-identifier hs-var">count</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">MVar Int -&gt; IO Int
+</span><span class="hs-identifier hs-var">return</span></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><span class="hs-identifier hs-var">True</span></span><span>
+</span><span id="line-25"></span><span>        </span><span class="hs-keyword">else</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-26"></span><span>            </span><span class="annot"><span class="annottext">Request -&gt; IO ()
+</span><a href="Log.html#logAuthRetry"><span class="hs-identifier hs-var">logAuthRetry</span></a></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">UTCTime -&gt; RequestType -&gt; String -&gt; String -&gt; Request
+</span><a href="Types.html#Request"><span class="hs-identifier hs-var">Request</span></a></span><span> </span><span class="annot"><span class="annottext">UTCTime
+</span><a href="#local-6989586621679050199"><span class="hs-identifier hs-var">reqTime</span></a></span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050200"><span class="hs-identifier hs-var">reqType</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050201"><span class="hs-identifier hs-var">content</span></a></span><span> </span><span class="annot"><span class="annottext">String
+</span><a href="#local-6989586621679050202"><span class="hs-identifier hs-var">token</span></a></span><span class="hs-special">)</span><span>  </span><span class="hs-comment">-- Log retry</span><span>
+</span><span id="line-27"></span><span>            </span><span class="annot"><span class="annottext">Bool -&gt; IO Bool
+forall a. a -&gt; IO a
+forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
+</span><span class="hs-identifier hs-var">return</span></span><span> </span><span class="annot"><span class="annottext">Bool
+</span><span class="hs-identifier hs-var">False</span></span><span>
+</span><span id="line-28"></span><span>
+</span><span id="line-29"></span><span class="annot"><span class="hs-comment">-- | Function that simulates the Web Server</span></span><span>
+</span><span id="line-30"></span><span class="annot"><a href="Server.html#server"><span class="hs-identifier hs-type">server</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Types.html#RequestQueue"><span class="hs-identifier hs-type">RequestQueue</span></a></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">MVar</span></span><span> </span><span class="annot"><span class="hs-identifier hs-type">Int</span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="hs-identifier hs-type">IO</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-31"></span><span id="server"><span class="annot"><span class="annottext">server :: RequestQueue -&gt; MVar Int -&gt; IO ()
+</span><a href="Server.html#server"><span class="hs-identifier hs-var hs-var">server</span></a></span></span><span> </span><span id="local-6989586621679050214"><span class="annot"><span class="annottext">RequestQueue
+</span><a href="#local-6989586621679050214"><span class="hs-identifier hs-var">queue</span></a></span></span><span> </span><span id="local-6989586621679050215"><span class="annot"><span class="annottext">MVar Int
+</span><a href="#local-6989586621679050215"><span class="hs-identifier hs-var">counter</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">IO ()
+</span><a href="#local-6989586621679050216"><span class="hs-identifier hs-var">processRequests</span></a></span><span>
+</span><span id="line-32"></span><span>  </span><span class="hs-keyword">where</span><span>
+</span><span id="line-33"></span><span>    </span><span id="local-6989586621679050216"><span class="annot"><span class="annottext">processRequests :: IO ()
+</span><a href="#local-6989586621679050216"><span class="hs-identifier hs-var hs-var">processRequests</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-34"></span><span>        </span><span id="local-6989586621679050236"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050236"><span class="hs-identifier hs-var">count</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">MVar Int -&gt; IO Int
 forall a. MVar a -&gt; IO a
 </span><span class="hs-identifier hs-var">readMVar</span></span><span> </span><span class="annot"><span class="annottext">MVar Int
-</span><a href="#local-6989586621679049009"><span class="hs-identifier hs-var">counter</span></a></span><span>
-</span><span id="line-22"></span><span>        </span><span class="annot"><span class="annottext">Bool -&gt; IO () -&gt; IO ()
+</span><a href="#local-6989586621679050215"><span class="hs-identifier hs-var">counter</span></a></span><span>
+</span><span id="line-35"></span><span>        </span><span class="annot"><span class="annottext">Bool -&gt; IO () -&gt; IO ()
 forall (f :: * -&gt; *). Applicative f =&gt; Bool -&gt; f () -&gt; f ()
 </span><span class="hs-identifier hs-var">when</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679049027"><span class="hs-identifier hs-var">count</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+</span><a href="#local-6989586621679050236"><span class="hs-identifier hs-var">count</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
 forall a. Ord a =&gt; a -&gt; a -&gt; Bool
 </span><span class="hs-operator hs-var">&lt;</span></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">100</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(IO () -&gt; IO ()) -&gt; IO () -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
 </span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-23"></span><span>            </span><span class="annot"><span class="annottext">RequestQueue -&gt; ([Request] -&gt; IO [Request]) -&gt; IO ()
+</span><span id="line-36"></span><span>            </span><span class="annot"><span class="annottext">RequestQueue -&gt; ([Request] -&gt; IO [Request]) -&gt; IO ()
 forall a. MVar a -&gt; (a -&gt; IO a) -&gt; IO ()
 </span><span class="hs-identifier hs-var">modifyMVar_</span></span><span> </span><span class="annot"><span class="annottext">RequestQueue
-</span><a href="#local-6989586621679049008"><span class="hs-identifier hs-var">queue</span></a></span><span> </span><span class="annot"><span class="annottext">(([Request] -&gt; IO [Request]) -&gt; IO ())
+</span><a href="#local-6989586621679050214"><span class="hs-identifier hs-var">queue</span></a></span><span> </span><span class="annot"><span class="annottext">(([Request] -&gt; IO [Request]) -&gt; IO ())
 -&gt; ([Request] -&gt; IO [Request]) -&gt; IO ()
 forall a b. (a -&gt; b) -&gt; a -&gt; b
-</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679049029"><span class="annot"><span class="annottext">[Request]
-</span><a href="#local-6989586621679049029"><span class="hs-identifier hs-var">reqs</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">[Request]
-</span><a href="#local-6989586621679049029"><span class="hs-identifier hs-var">reqs</span></a></span><span> </span><span class="hs-keyword">of</span><span>
-</span><span id="line-24"></span><span>                </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">[Request] -&gt; IO [Request]
+</span><span class="hs-operator hs-var">$</span></span><span> </span><span class="hs-glyph">\</span><span id="local-6989586621679050238"><span class="annot"><span class="annottext">[Request]
+</span><a href="#local-6989586621679050238"><span class="hs-identifier hs-var">reqs</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">case</span><span> </span><span class="annot"><span class="annottext">[Request]
+</span><a href="#local-6989586621679050238"><span class="hs-identifier hs-var">reqs</span></a></span><span> </span><span class="hs-keyword">of</span><span>
+</span><span id="line-37"></span><span>                </span><span class="hs-special">[</span><span class="hs-special">]</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">[Request] -&gt; IO [Request]
 forall a. a -&gt; IO a
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><span class="hs-identifier hs-var">return</span></span><span> </span><span class="annot"><span class="annottext">[Request]
-</span><a href="#local-6989586621679049029"><span class="hs-identifier hs-var">reqs</span></a></span><span>
-</span><span id="line-25"></span><span>                </span><span class="hs-special">(</span><span id="local-6989586621679049030"><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679049030"><span class="hs-identifier hs-var">req</span></a></span></span><span class="annot"><span class="hs-glyph hs-type">:</span></span><span id="local-6989586621679049031"><span class="annot"><span class="annottext">[Request]
-</span><a href="#local-6989586621679049031"><span class="hs-identifier hs-var">rest</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
-</span><span id="line-26"></span><span>                    </span><span id="local-6989586621679049032"><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621679049032"><span class="hs-identifier hs-var">response</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Request -&gt; IO Response
+</span><a href="#local-6989586621679050238"><span class="hs-identifier hs-var">reqs</span></a></span><span>
+</span><span id="line-38"></span><span>                </span><span class="hs-special">(</span><span id="local-6989586621679050239"><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679050239"><span class="hs-identifier hs-var">req</span></a></span></span><span class="annot"><span class="hs-glyph hs-type">:</span></span><span id="local-6989586621679050240"><span class="annot"><span class="annottext">[Request]
+</span><a href="#local-6989586621679050240"><span class="hs-identifier hs-var">rest</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="hs-keyword">do</span><span>
+</span><span id="line-39"></span><span>                    </span><span id="local-6989586621679050241"><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679050241"><span class="hs-identifier hs-var">success</span></a></span></span><span> </span><span class="hs-glyph">&lt;-</span><span> </span><span class="annot"><span class="annottext">Request -&gt; IO Bool
 </span><a href="Server.html#processRequest"><span class="hs-identifier hs-var">processRequest</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679049030"><span class="hs-identifier hs-var">req</span></a></span><span>
-</span><span id="line-27"></span><span>                    </span><span class="annot"><span class="annottext">Request -&gt; Response -&gt; IO ()
-</span><a href="Log.html#logResponse"><span class="hs-identifier hs-var">logResponse</span></a></span><span> </span><span class="annot"><span class="annottext">Request
-</span><a href="#local-6989586621679049030"><span class="hs-identifier hs-var">req</span></a></span><span> </span><span class="annot"><span class="annottext">Response
-</span><a href="#local-6989586621679049032"><span class="hs-identifier hs-var">response</span></a></span><span>
-</span><span id="line-28"></span><span>                    </span><span class="annot"><span class="annottext">MVar Int -&gt; (Int -&gt; IO Int) -&gt; IO ()
+</span><a href="#local-6989586621679050239"><span class="hs-identifier hs-var">req</span></a></span><span>
+</span><span id="line-40"></span><span>                    </span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679050241"><span class="hs-identifier hs-var">success</span></a></span><span>
+</span><span id="line-41"></span><span>                        </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">MVar Int -&gt; (Int -&gt; IO Int) -&gt; IO ()
 forall a. MVar a -&gt; (a -&gt; IO a) -&gt; IO ()
 </span><span class="hs-identifier hs-var">modifyMVar_</span></span><span> </span><span class="annot"><span class="annottext">MVar Int
-</span><a href="#local-6989586621679049009"><span class="hs-identifier hs-var">counter</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679049033"><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679049033"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; IO Int
+</span><a href="#local-6989586621679050215"><span class="hs-identifier hs-var">counter</span></a></span><span> </span><span class="hs-special">(</span><span class="hs-glyph">\</span><span id="local-6989586621679050242"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050242"><span class="hs-identifier hs-var">c</span></a></span></span><span> </span><span class="hs-glyph">-&gt;</span><span> </span><span class="annot"><span class="annottext">Int -&gt; IO Int
 forall a. a -&gt; IO a
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
 </span><span class="hs-identifier hs-var">return</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
-</span><a href="#local-6989586621679049033"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
+</span><a href="#local-6989586621679050242"><span class="hs-identifier hs-var">c</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Int
 forall a. Num a =&gt; a -&gt; a -&gt; a
 </span><span class="hs-operator hs-var">+</span></span><span> </span><span class="annot"><span class="annottext">Int
 </span><span class="hs-number">1</span></span><span class="hs-special">)</span><span class="hs-special">)</span><span>
-</span><span id="line-29"></span><span>                    </span><span class="annot"><span class="annottext">[Request] -&gt; IO [Request]
+</span><span id="line-42"></span><span>                        </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">() -&gt; IO ()
 forall a. a -&gt; IO a
 forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
-</span><span class="hs-identifier hs-var">return</span></span><span> </span><span class="annot"><span class="annottext">[Request]
-</span><a href="#local-6989586621679049031"><span class="hs-identifier hs-var">rest</span></a></span><span>
-</span><span id="line-30"></span><span>            </span><span class="annot"><span class="annottext">IO ()
-</span><a href="#local-6989586621679049010"><span class="hs-identifier hs-var">processRequests</span></a></span><span>
-</span><span id="line-31"></span></pre></body></html>
+</span><span class="hs-identifier hs-var">return</span></span><span> </span><span class="hs-special">(</span><span class="hs-special">)</span><span>
+</span><span id="line-43"></span><span>                    </span><span class="annot"><span class="annottext">[Request] -&gt; IO [Request]
+forall a. a -&gt; IO a
+forall (m :: * -&gt; *) a. Monad m =&gt; a -&gt; m a
+</span><span class="hs-identifier hs-var">return</span></span><span> </span><span class="hs-special">(</span><span class="hs-keyword">if</span><span> </span><span class="annot"><span class="annottext">Bool
+</span><a href="#local-6989586621679050241"><span class="hs-identifier hs-var">success</span></a></span><span> </span><span class="hs-keyword">then</span><span> </span><span class="annot"><span class="annottext">[Request]
+</span><a href="#local-6989586621679050240"><span class="hs-identifier hs-var">rest</span></a></span><span> </span><span class="hs-keyword">else</span><span> </span><span class="annot"><span class="annottext">[Request]
+</span><a href="#local-6989586621679050240"><span class="hs-identifier hs-var">rest</span></a></span><span> </span><span class="annot"><span class="annottext">[Request] -&gt; [Request] -&gt; [Request]
+forall a. [a] -&gt; [a] -&gt; [a]
+</span><span class="hs-operator hs-var">++</span></span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">Request
+</span><a href="#local-6989586621679050239"><span class="hs-identifier hs-var">req</span></a></span><span class="hs-special">]</span><span class="hs-special">)</span><span>
+</span><span id="line-44"></span><span>            </span><span class="annot"><span class="annottext">IO ()
+</span><a href="#local-6989586621679050216"><span class="hs-identifier hs-var">processRequests</span></a></span><span>
+</span><span id="line-45"></span><span>        </span><span class="hs-comment">-- Log the final count once 100 requests are processed</span><span>
+</span><span id="line-46"></span><span>        </span><span class="annot"><span class="annottext">Bool -&gt; IO () -&gt; IO ()
+forall (f :: * -&gt; *). Applicative f =&gt; Bool -&gt; f () -&gt; f ()
+</span><span class="hs-identifier hs-var">when</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050236"><span class="hs-identifier hs-var">count</span></a></span><span> </span><span class="annot"><span class="annottext">Int -&gt; Int -&gt; Bool
+forall a. Eq a =&gt; a -&gt; a -&gt; Bool
+</span><span class="hs-operator hs-var">==</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">100</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">(IO () -&gt; IO ()) -&gt; IO () -&gt; IO ()
+forall a b. (a -&gt; b) -&gt; a -&gt; b
+</span><span class="hs-operator hs-var">$</span></span><span>
+</span><span id="line-47"></span><span>            </span><span class="annot"><span class="annottext">Int -&gt; IO ()
+</span><a href="Log.html#logFinalCount"><span class="hs-identifier hs-var">logFinalCount</span></a></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050236"><span class="hs-identifier hs-var">count</span></a></span><span>
+</span><span id="line-48"></span></pre></body></html>

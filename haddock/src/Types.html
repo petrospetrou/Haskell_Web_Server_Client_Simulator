@@ -1,16 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Types</span><span> </span><span class="hs-keyword">where</span><span>
-</span><span id="line-2"></span><span>
-</span><span id="line-3"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">Control.Concurrent</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">MVar</span></span><span class="hs-special">)</span><span>
-</span><span id="line-4"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">Data.Time</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">UTCTime</span></span><span class="hs-special">)</span><span>
-</span><span id="line-5"></span><span>
-</span><span id="line-6"></span><span class="annot"><span class="hs-comment">-- | Request data type for modelling an HTTP request</span></span><span>
-</span><span id="line-7"></span><span class="hs-keyword">data</span><span> </span><span id="Request"><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-var">Request</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Request"><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-var">Request</span></a></span></span><span> </span><span>
-</span><span id="line-8"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="requestTimestamp"><span class="annot"><span class="annottext">Request -&gt; UTCTime
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="style.css" /><script type="text/javascript" src="highlight.js"></script></head><body><pre><span id="local-6989586621679049920"><span id="local-6989586621679049921"></span></span><span class="hs-keyword">module</span><span> </span><span class="hs-identifier">Types</span><span> </span><span>
+</span><span id="line-2"></span><span>  </span><span class="hs-special">(</span><span> </span><span class="annot"><a href="Types.html#RequestType"><span class="hs-identifier">RequestType</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span>
+</span><span id="line-3"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier">Request</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span>
+</span><span id="line-4"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Types.html#Response"><span class="hs-identifier">Response</span></a></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span>
+</span><span id="line-5"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Types.html#RequestQueue"><span class="hs-identifier">RequestQueue</span></a></span><span>
+</span><span id="line-6"></span><span>  </span><span class="hs-special">,</span><span> </span><span class="annot"><a href="Types.html#validTokens"><span class="hs-identifier">validTokens</span></a></span><span>
+</span><span id="line-7"></span><span>  </span><span class="hs-special">)</span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-8"></span><span>
+</span><span id="line-9"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">Control.Concurrent</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">MVar</span></span><span class="hs-special">)</span><span>
+</span><span id="line-10"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">Data.Time</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">UTCTime</span></span><span class="hs-special">)</span><span>
+</span><span id="line-11"></span><span class="hs-keyword">import</span><span> </span><span class="annot"><span class="hs-identifier">System.Random</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="hs-identifier">Random</span></span><span class="hs-special">(</span><span class="hs-glyph">..</span><span class="hs-special">)</span><span class="hs-special">,</span><span> </span><span class="annot"><span class="hs-identifier">randomR</span></span><span class="hs-special">)</span><span>
+</span><span id="line-12"></span><span>
+</span><span id="line-13"></span><span class="annot"><span class="hs-comment">-- | Request data type for modelling an HTTP request</span></span><span>
+</span><span id="line-14"></span><span class="hs-keyword">data</span><span> </span><span id="Request"><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-var">Request</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Request"><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-var">Request</span></a></span></span><span> </span><span>
+</span><span id="line-15"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="requestTimestamp"><span class="annot"><span class="annottext">Request -&gt; UTCTime
 </span><a href="Types.html#requestTimestamp"><span class="hs-identifier hs-var hs-var">requestTimestamp</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">UTCTime</span></span><span>
-</span><span id="line-9"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="requestContent"><span class="annot"><span class="annottext">Request -&gt; String
+</span><span id="line-16"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="requestType"><span class="annot"><span class="annottext">Request -&gt; RequestType
+</span><a href="Types.html#requestType"><span class="hs-identifier hs-var hs-var">requestType</span></a></span></span><span>      </span><span class="hs-glyph">::</span><span> </span><span class="annot"><a href="Types.html#RequestType"><span class="hs-identifier hs-type">RequestType</span></a></span><span>
+</span><span id="line-17"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="requestContent"><span class="annot"><span class="annottext">Request -&gt; String
 </span><a href="Types.html#requestContent"><span class="hs-identifier hs-var hs-var">requestContent</span></a></span></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">String</span></span><span>
-</span><span id="line-10"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-11"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679048912"><span id="local-6989586621679048921"><span id="local-6989586621679048925"><span class="annot"><span class="annottext">Int -&gt; Request -&gt; ShowS
+</span><span id="line-18"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="clientToken"><span class="annot"><span class="annottext">Request -&gt; String
+</span><a href="Types.html#clientToken"><span class="hs-identifier hs-var hs-var">clientToken</span></a></span></span><span>      </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">String</span></span><span>
+</span><span id="line-19"></span><span>  </span><span class="hs-special">}</span><span>
+</span><span id="line-20"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679049932"><span id="local-6989586621679049944"><span id="local-6989586621679049948"><span class="annot"><span class="annottext">Int -&gt; Request -&gt; ShowS
 [Request] -&gt; ShowS
 Request -&gt; String
 (Int -&gt; Request -&gt; ShowS)
@@ -24,15 +35,15 @@ show :: Request -&gt; String
 $cshowList :: [Request] -&gt; ShowS
 showList :: [Request] -&gt; ShowS
 </span><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></span></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-12"></span><span>
-</span><span id="line-13"></span><span class="annot"><span class="hs-comment">-- | Response data type for modelling an HTTP response</span></span><span>
-</span><span id="line-14"></span><span class="hs-keyword">data</span><span> </span><span id="Response"><span class="annot"><a href="Types.html#Response"><span class="hs-identifier hs-var">Response</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Response"><span class="annot"><a href="Types.html#Response"><span class="hs-identifier hs-var">Response</span></a></span></span><span>
-</span><span id="line-15"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="responseTimestamp"><span class="annot"><span class="annottext">Response -&gt; UTCTime
+</span><span id="line-21"></span><span>
+</span><span id="line-22"></span><span class="annot"><span class="hs-comment">-- | Response data type for modelling an HTTP response</span></span><span>
+</span><span id="line-23"></span><span class="hs-keyword">data</span><span> </span><span id="Response"><span class="annot"><a href="Types.html#Response"><span class="hs-identifier hs-var">Response</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="Response"><span class="annot"><a href="Types.html#Response"><span class="hs-identifier hs-var">Response</span></a></span></span><span>
+</span><span id="line-24"></span><span>  </span><span class="hs-special">{</span><span> </span><span id="responseTimestamp"><span class="annot"><span class="annottext">Response -&gt; UTCTime
 </span><a href="Types.html#responseTimestamp"><span class="hs-identifier hs-var hs-var">responseTimestamp</span></a></span></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">UTCTime</span></span><span>
-</span><span id="line-16"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="responseContent"><span class="annot"><span class="annottext">Response -&gt; String
+</span><span id="line-25"></span><span>  </span><span class="hs-special">,</span><span> </span><span id="responseContent"><span class="annot"><span class="annottext">Response -&gt; String
 </span><a href="Types.html#responseContent"><span class="hs-identifier hs-var hs-var">responseContent</span></a></span></span><span>   </span><span class="hs-glyph">::</span><span> </span><span class="annot"><span class="hs-identifier hs-type">String</span></span><span>
-</span><span id="line-17"></span><span>  </span><span class="hs-special">}</span><span>
-</span><span id="line-18"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679048933"><span id="local-6989586621679048939"><span id="local-6989586621679048943"><span class="annot"><span class="annottext">Int -&gt; Response -&gt; ShowS
+</span><span id="line-26"></span><span>  </span><span class="hs-special">}</span><span>
+</span><span id="line-27"></span><span>  </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679049956"><span id="local-6989586621679049962"><span id="local-6989586621679049966"><span class="annot"><span class="annottext">Int -&gt; Response -&gt; ShowS
 [Response] -&gt; ShowS
 Response -&gt; String
 (Int -&gt; Response -&gt; ShowS)
@@ -46,6 +57,139 @@ show :: Response -&gt; String
 $cshowList :: [Response] -&gt; ShowS
 showList :: [Response] -&gt; ShowS
 </span><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></span></span></span></span><span class="hs-special">)</span><span>
-</span><span id="line-19"></span><span>
-</span><span id="line-20"></span><span class="annot"><span class="hs-comment">-- | RequestQueue data type for modelling the queue of requests received by the server</span></span><span>
-</span><span id="line-21"></span><span class="hs-keyword">type</span><span> </span><span id="RequestQueue"><span class="annot"><a href="Types.html#RequestQueue"><span class="hs-identifier hs-var">RequestQueue</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="hs-identifier hs-type">MVar</span></span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span class="hs-special">]</span></pre></body></html>
+</span><span id="line-28"></span><span>
+</span><span id="line-29"></span><span class="annot"><span class="hs-comment">-- | RequestQueue data type for modelling the queue of requests received by the server</span></span><span>
+</span><span id="line-30"></span><span class="hs-keyword">type</span><span> </span><span id="RequestQueue"><span class="annot"><a href="Types.html#RequestQueue"><span class="hs-identifier hs-var">RequestQueue</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="hs-identifier hs-type">MVar</span></span><span> </span><span class="hs-special">[</span><span class="annot"><a href="Types.html#Request"><span class="hs-identifier hs-type">Request</span></a></span><span class="hs-special">]</span><span>
+</span><span id="line-31"></span><span>
+</span><span id="line-32"></span><span class="annot"><span class="hs-comment">-- | Data types for the Extra Features</span></span><span>
+</span><span id="line-33"></span><span>
+</span><span id="line-34"></span><span class="hs-comment">-- | Extra Feature 1 - Request Type Assignment</span><span>
+</span><span id="line-35"></span><span class="hs-comment">-- | Types of requests (GET, POST, DELETE)</span><span>
+</span><span id="line-36"></span><span class="hs-keyword">data</span><span> </span><span id="RequestType"><span class="annot"><a href="Types.html#RequestType"><span class="hs-identifier hs-var">RequestType</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span id="GET"><span class="annot"><a href="Types.html#GET"><span class="hs-identifier hs-var">GET</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="POST"><span class="annot"><a href="Types.html#POST"><span class="hs-identifier hs-var">POST</span></a></span></span><span> </span><span class="hs-glyph">|</span><span> </span><span id="DELETE"><span class="annot"><a href="Types.html#DELETE"><span class="hs-identifier hs-var">DELETE</span></a></span></span><span> </span><span class="hs-keyword">deriving</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679049972"><span id="local-6989586621679049974"><span id="local-6989586621679049977"><span class="annot"><span class="annottext">Int -&gt; RequestType -&gt; ShowS
+[RequestType] -&gt; ShowS
+RequestType -&gt; String
+(Int -&gt; RequestType -&gt; ShowS)
+-&gt; (RequestType -&gt; String)
+-&gt; ([RequestType] -&gt; ShowS)
+-&gt; Show RequestType
+forall a.
+(Int -&gt; a -&gt; ShowS) -&gt; (a -&gt; String) -&gt; ([a] -&gt; ShowS) -&gt; Show a
+$cshowsPrec :: Int -&gt; RequestType -&gt; ShowS
+showsPrec :: Int -&gt; RequestType -&gt; ShowS
+$cshow :: RequestType -&gt; String
+show :: RequestType -&gt; String
+$cshowList :: [RequestType] -&gt; ShowS
+showList :: [RequestType] -&gt; ShowS
+</span><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Show</span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679049980"><span id="local-6989586621679049988"><span id="local-6989586621679049994"><span id="local-6989586621679050003"><span id="local-6989586621679050005"><span id="local-6989586621679050009"><span id="local-6989586621679050013"><span id="local-6989586621679050017"><span class="annot"><span class="annottext">Int -&gt; RequestType
+RequestType -&gt; Int
+RequestType -&gt; [RequestType]
+RequestType -&gt; RequestType
+RequestType -&gt; RequestType -&gt; [RequestType]
+RequestType -&gt; RequestType -&gt; RequestType -&gt; [RequestType]
+(RequestType -&gt; RequestType)
+-&gt; (RequestType -&gt; RequestType)
+-&gt; (Int -&gt; RequestType)
+-&gt; (RequestType -&gt; Int)
+-&gt; (RequestType -&gt; [RequestType])
+-&gt; (RequestType -&gt; RequestType -&gt; [RequestType])
+-&gt; (RequestType -&gt; RequestType -&gt; [RequestType])
+-&gt; (RequestType -&gt; RequestType -&gt; RequestType -&gt; [RequestType])
+-&gt; Enum RequestType
+forall a.
+(a -&gt; a)
+-&gt; (a -&gt; a)
+-&gt; (Int -&gt; a)
+-&gt; (a -&gt; Int)
+-&gt; (a -&gt; [a])
+-&gt; (a -&gt; a -&gt; [a])
+-&gt; (a -&gt; a -&gt; [a])
+-&gt; (a -&gt; a -&gt; a -&gt; [a])
+-&gt; Enum a
+$csucc :: RequestType -&gt; RequestType
+succ :: RequestType -&gt; RequestType
+$cpred :: RequestType -&gt; RequestType
+pred :: RequestType -&gt; RequestType
+$ctoEnum :: Int -&gt; RequestType
+toEnum :: Int -&gt; RequestType
+$cfromEnum :: RequestType -&gt; Int
+fromEnum :: RequestType -&gt; Int
+$cenumFrom :: RequestType -&gt; [RequestType]
+enumFrom :: RequestType -&gt; [RequestType]
+$cenumFromThen :: RequestType -&gt; RequestType -&gt; [RequestType]
+enumFromThen :: RequestType -&gt; RequestType -&gt; [RequestType]
+$cenumFromTo :: RequestType -&gt; RequestType -&gt; [RequestType]
+enumFromTo :: RequestType -&gt; RequestType -&gt; [RequestType]
+$cenumFromThenTo :: RequestType -&gt; RequestType -&gt; RequestType -&gt; [RequestType]
+enumFromThenTo :: RequestType -&gt; RequestType -&gt; RequestType -&gt; [RequestType]
+</span><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var hs-var">Enum</span></span></span></span></span></span></span></span></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679050021"><span id="local-6989586621679050023"><span class="annot"><span class="annottext">RequestType
+RequestType -&gt; RequestType -&gt; Bounded RequestType
+forall a. a -&gt; a -&gt; Bounded a
+$cminBound :: RequestType
+minBound :: RequestType
+$cmaxBound :: RequestType
+maxBound :: RequestType
+</span><span class="hs-identifier hs-var hs-var hs-var hs-var hs-var hs-var">Bounded</span></span></span></span><span class="hs-special">)</span><span>
+</span><span id="line-37"></span><span>
+</span><span id="line-38"></span><span class="annot"><span class="hs-comment">-- | Random instance for RequestType</span></span><span>
+</span><span id="line-39"></span><span class="hs-keyword">instance</span><span> </span><span id="local-6989586621679050029"><span id="local-6989586621679050035"><span class="annot"><span class="hs-identifier hs-type">Random</span></span><span> </span><span class="annot"><a href="Types.html#RequestType"><span class="hs-identifier hs-type">RequestType</span></a></span></span></span><span> </span><span class="hs-keyword">where</span><span>
+</span><span id="line-40"></span><span>    </span><span id="local-6989586621679050043"><span class="annot"><span class="annottext">random :: forall g. RandomGen g =&gt; g -&gt; (RequestType, g)
+</span><a href="#local-6989586621679050043"><span class="hs-identifier hs-var hs-var hs-var hs-var">random</span></a></span></span><span> </span><span id="local-6989586621679050045"><span class="annot"><span class="annottext">g
+</span><a href="#local-6989586621679050045"><span class="hs-identifier hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span>
+</span><span id="line-41"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679050051"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050051"><span class="hs-identifier hs-var">index</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679050052"><span class="annot"><span class="annottext">g
+</span><a href="#local-6989586621679050052"><span class="hs-identifier hs-var">g'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; g -&gt; (Int, g)
+forall g. RandomGen g =&gt; (Int, Int) -&gt; g -&gt; (Int, g)
+forall a g. (Random a, RandomGen g) =&gt; (a, a) -&gt; g -&gt; (a, g)
+</span><span class="hs-identifier hs-var">randomR</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">0</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">Int
+</span><span class="hs-number">2</span></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">g
+</span><a href="#local-6989586621679050045"><span class="hs-identifier hs-var">g</span></a></span><span>
+</span><span id="line-42"></span><span>            </span><span id="local-6989586621679050053"><span class="annot"><span class="annottext">requestTypes :: [RequestType]
+</span><a href="#local-6989586621679050053"><span class="hs-identifier hs-var hs-var">requestTypes</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">RequestType
+</span><a href="Types.html#GET"><span class="hs-identifier hs-var">GET</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="Types.html#POST"><span class="hs-identifier hs-var">POST</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="Types.html#DELETE"><span class="hs-identifier hs-var">DELETE</span></a></span><span class="hs-special">]</span><span>
+</span><span id="line-43"></span><span>        </span><span class="hs-keyword">in</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">[RequestType]
+</span><a href="#local-6989586621679050053"><span class="hs-identifier hs-var">requestTypes</span></a></span><span> </span><span class="annot"><span class="annottext">[RequestType] -&gt; Int -&gt; RequestType
+forall a. HasCallStack =&gt; [a] -&gt; Int -&gt; a
+</span><span class="hs-operator hs-var">!!</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050051"><span class="hs-identifier hs-var">index</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">g
+</span><a href="#local-6989586621679050052"><span class="hs-identifier hs-var">g'</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-44"></span><span>
+</span><span id="line-45"></span><span>    </span><span id="local-6989586621679050057"><span class="annot"><span class="annottext">randomR :: forall g.
+RandomGen g =&gt;
+(RequestType, RequestType) -&gt; g -&gt; (RequestType, g)
+</span><span class="hs-identifier hs-var hs-var hs-var hs-var">randomR</span></span></span><span> </span><span class="hs-special">(</span><span id="local-6989586621679050058"><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050058"><span class="hs-identifier hs-var">lo</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679050059"><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050059"><span class="hs-identifier hs-var">hi</span></a></span></span><span class="hs-special">)</span><span> </span><span id="local-6989586621679050060"><span class="annot"><span class="annottext">g
+</span><a href="#local-6989586621679050060"><span class="hs-identifier hs-var">g</span></a></span></span><span> </span><span class="hs-glyph">=</span><span>
+</span><span id="line-46"></span><span>        </span><span class="hs-keyword">let</span><span> </span><span class="hs-special">(</span><span id="local-6989586621679050065"><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050065"><span class="hs-identifier hs-var">index</span></a></span></span><span class="hs-special">,</span><span> </span><span id="local-6989586621679050066"><span class="annot"><span class="annottext">g
+</span><a href="#local-6989586621679050066"><span class="hs-identifier hs-var">g'</span></a></span></span><span class="hs-special">)</span><span> </span><span class="hs-glyph">=</span><span> </span><span class="annot"><span class="annottext">(Int, Int) -&gt; g -&gt; (Int, g)
+forall g. RandomGen g =&gt; (Int, Int) -&gt; g -&gt; (Int, g)
+forall a g. (Random a, RandomGen g) =&gt; (a, a) -&gt; g -&gt; (a, g)
+</span><span class="hs-identifier hs-var">randomR</span></span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">RequestType -&gt; Int
+forall a. Enum a =&gt; a -&gt; Int
+</span><span class="hs-identifier hs-var">fromEnum</span></span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050058"><span class="hs-identifier hs-var">lo</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">RequestType -&gt; Int
+forall a. Enum a =&gt; a -&gt; Int
+</span><span class="hs-identifier hs-var">fromEnum</span></span><span> </span><span class="annot"><span class="annottext">RequestType
+</span><a href="#local-6989586621679050059"><span class="hs-identifier hs-var">hi</span></a></span><span class="hs-special">)</span><span> </span><span class="annot"><span class="annottext">g
+</span><a href="#local-6989586621679050060"><span class="hs-identifier hs-var">g</span></a></span><span>
+</span><span id="line-47"></span><span>        </span><span class="hs-keyword">in</span><span> </span><span class="hs-special">(</span><span class="annot"><span class="annottext">Int -&gt; RequestType
+forall a. Enum a =&gt; Int -&gt; a
+</span><span class="hs-identifier hs-var">toEnum</span></span><span> </span><span class="annot"><span class="annottext">Int
+</span><a href="#local-6989586621679050065"><span class="hs-identifier hs-var">index</span></a></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">g
+</span><a href="#local-6989586621679050066"><span class="hs-identifier hs-var">g'</span></a></span><span class="hs-special">)</span><span>
+</span><span id="line-48"></span><span>
+</span><span id="line-49"></span><span class="hs-comment">-- | Extra Feature 2 - Authentication Simulation</span><span>
+</span><span id="line-50"></span><span class="hs-comment">-- | List of valid tokens</span><span>
+</span><span id="line-51"></span><span class="annot"><a href="Types.html#validTokens"><span class="hs-identifier hs-type">validTokens</span></a></span><span> </span><span class="hs-glyph">::</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="hs-identifier hs-type">String</span></span><span class="hs-special">]</span><span>
+</span><span id="line-52"></span><span id="validTokens"><span class="annot"><span class="annottext">validTokens :: [String]
+</span><a href="Types.html#validTokens"><span class="hs-identifier hs-var hs-var">validTokens</span></a></span></span><span> </span><span class="hs-glyph">=</span><span> </span><span class="hs-special">[</span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;46VI4lub7O&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;XdBE3lesjh&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;AOWu2gMEgI&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;q69L0xBG9y&quot;</span></span><span class="hs-special">,</span><span> </span><span class="annot"><span class="annottext">String
+</span><span class="hs-string">&quot;mdUfIXhQrc&quot;</span></span><span class="hs-special">]</span><span> </span><span class="hs-comment">-- Randomly generated tokens</span><span>
+</span><span id="line-53"></span></pre></body></html>

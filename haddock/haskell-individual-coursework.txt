@@ -3,20 +3,28 @@
 
 
 -- | Please see the README on GitHub at
---   <a>https://github.com/githubuser/haskell-individual-coursework#readme</a>
+--   <a>https://github.com/petrospetrou/haskell-individual-coursework</a>
 @package haskell-individual-coursework
 @version 0.1.0.0
 
-module Lib
-someFunc :: IO ()
-
 module Types
+
+-- | Data types for the Extra Features
+--   
+--   Extra Feature 1 - Request Type Assignment | Types of requests (GET,
+--   POST, DELETE)
+data RequestType
+GET :: RequestType
+POST :: RequestType
+DELETE :: RequestType
 
 -- | Request data type for modelling an HTTP request
 data Request
-Request :: UTCTime -> String -> Request
+Request :: UTCTime -> RequestType -> String -> String -> Request
 [requestTimestamp] :: Request -> UTCTime
+[requestType] :: Request -> RequestType
 [requestContent] :: Request -> String
+[clientToken] :: Request -> String
 
 -- | Response data type for modelling an HTTP response
 data Response
@@ -27,13 +35,32 @@ Response :: UTCTime -> String -> Response
 -- | RequestQueue data type for modelling the queue of requests received by
 --   the server
 type RequestQueue = MVar [Request]
+
+-- | Extra Feature 2 - Authentication Simulation | List of valid tokens
+validTokens :: [String]
+instance GHC.Enum.Bounded Types.RequestType
+instance GHC.Enum.Enum Types.RequestType
+instance System.Random.Random Types.RequestType
 instance GHC.Show.Show Types.Request
+instance GHC.Show.Show Types.RequestType
 instance GHC.Show.Show Types.Response
 
 module Log
 
--- | Function that handles the Log Requests and Responses
+-- | Function to log successful request-response pairs
 logResponse :: Request -> Response -> IO ()
+
+-- | Function to log unauthorized requests
+logUnauthorized :: Request -> IO ()
+
+-- | Function to log successful authentication
+logAuthSuccess :: String -> IO ()
+
+-- | Function to log retries for failed authentication
+logAuthRetry :: Request -> IO ()
+
+-- | Function to log the final request count
+logFinalCount :: Int -> IO ()
 
 module Server
 
