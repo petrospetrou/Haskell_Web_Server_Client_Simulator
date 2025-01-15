@@ -18,6 +18,7 @@ main = do
     forM_ [1..10] $ \clientId -> forkIO $ client clientId queue counter
     waitForCompletion counter
 
+-- | Function that is responsible for end the program as soon as 100 requests executed
 waitForCompletion :: MVar Int -> IO ()
 waitForCompletion counter = do
     count <- readMVar counter

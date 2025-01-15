@@ -1,700 +1,670 @@
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:25.618645 UTC | Type: GET | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:25.618656 UTC | Content: GET Response to: Client 8 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:25.654663 UTC | Type: GET | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:25.654668 UTC | Content: GET Response to: Client 6 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:25.694099 UTC | Type: POST | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:25.69412 UTC | Content: POST Response to: Client 2 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:25.694101 UTC | Type: DELETE | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:25.694379 UTC | Content: DELETE Response: Client 9 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:25.697505 UTC | Type: GET | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:25.69751 UTC | Content: GET Response to: Client 5 says hello!
+--------------------------------------------------
 Authentication Successful: Token - token456
 --------------------------------------------------
 Authenticated Token: token456
-Request: 2025-01-15 13:31:12.308485 UTC | Type: GET | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:12.309267 UTC | Content: GET Response to: Client 7 says hello!
+Request: 2025-01-15 13:42:25.719135 UTC | Type: DELETE | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:25.71915 UTC | Content: DELETE Response: Client 7 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:25.821855 UTC | Type: DELETE | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:25.821865 UTC | Content: DELETE Response: Client 3 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:25.891462 UTC | Type: POST | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:25.891482 UTC | Content: POST Response to: Client 1 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:25.891468 UTC | Type: GET | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:25.892141 UTC | Content: GET Response to: Client 10 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:25.946018 UTC | Type: DELETE | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:25.946038 UTC | Content: DELETE Response: Client 3 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:25.951241 UTC | Type: DELETE | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:25.951255 UTC | Content: DELETE Response: Client 6 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:25.959143 UTC | Type: DELETE | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:25.959151 UTC | Content: DELETE Response: Client 4 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:26.010176 UTC | Type: GET | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:26.010184 UTC | Content: GET Response to: Client 9 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:26.014528 UTC | Type: GET | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:26.014533 UTC | Content: GET Response to: Client 5 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.036526 UTC | Type: DELETE | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:26.036539 UTC | Content: DELETE Response: Client 8 says hello! has been deleted
+--------------------------------------------------
+Authentication Failed (Retry): Token - token456
+Request Requeued: 2025-01-15 13:42:26.061907 UTC | Type: POST | Content: Client 3 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - token456
+Request Requeued: 2025-01-15 13:42:26.061907 UTC | Type: POST | Content: Client 3 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:26.061907 UTC | Type: POST | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:26.062144 UTC | Content: POST Response to: Client 3 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - token789
+Request Requeued: 2025-01-15 13:42:26.111926 UTC | Type: DELETE | Content: Client 10 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:26.111926 UTC | Type: DELETE | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:26.112138 UTC | Content: DELETE Response: Client 10 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:26.160952 UTC | Type: DELETE | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:26.160974 UTC | Content: DELETE Response: Client 7 says hello! has been deleted
+--------------------------------------------------
+Authentication Failed (Retry): Token - token789
+Request Requeued: 2025-01-15 13:42:26.288712 UTC | Type: POST | Content: Client 2 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:26.288712 UTC | Type: POST | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:26.288962 UTC | Content: POST Response to: Client 2 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:26.288726 UTC | Type: DELETE | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:26.28945 UTC | Content: DELETE Response: Client 8 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:26.288729 UTC | Type: GET | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:26.289578 UTC | Content: GET Response to: Client 7 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.288731 UTC | Type: GET | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:26.289738 UTC | Content: GET Response to: Client 5 says hello!
 --------------------------------------------------
 Authentication Failed (Retry): Token - token123
-Request Requeued: 2025-01-15 13:31:12.346244 UTC | Type: POST | Content: Client 3 says hello!
+Request Requeued: 2025-01-15 13:42:26.288747 UTC | Type: GET | Content: Client 9 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token123
 --------------------------------------------------
 Authenticated Token: token123
-Request: 2025-01-15 13:31:12.346244 UTC | Type: POST | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:12.346461 UTC | Content: POST Response to: Client 3 says hello!
+Request: 2025-01-15 13:42:26.288747 UTC | Type: GET | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:26.289901 UTC | Content: GET Response to: Client 9 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.321751 UTC | Type: GET | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:26.321825 UTC | Content: GET Response to: Client 3 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:26.358384 UTC | Type: POST | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:26.358401 UTC | Content: POST Response to: Client 10 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.376655 UTC | Type: GET | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:26.376763 UTC | Content: GET Response to: Client 6 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token789
 --------------------------------------------------
 Authenticated Token: token789
-Request: 2025-01-15 13:31:12.408063 UTC | Type: POST | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:12.408077 UTC | Content: POST Response to: Client 8 says hello!
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:12.422619 UTC | Type: GET | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:12.422635 UTC | Content: GET Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenDEF
-Request Requeued: 2025-01-15 13:31:12.428273 UTC | Type: POST | Content: Client 2 says hello!
+Request: 2025-01-15 13:42:26.377797 UTC | Type: POST | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:26.377814 UTC | Content: POST Response to: Client 1 says hello!
 --------------------------------------------------
 Authentication Successful: Token - tokenDEF
 --------------------------------------------------
 Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:12.428273 UTC | Type: POST | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:12.428403 UTC | Content: POST Response to: Client 2 says hello!
+Request: 2025-01-15 13:42:26.399644 UTC | Type: DELETE | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:26.399665 UTC | Content: DELETE Response: Client 4 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.490683 UTC | Type: DELETE | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:26.490701 UTC | Content: DELETE Response: Client 2 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:26.517746 UTC | Type: DELETE | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:26.517766 UTC | Content: DELETE Response: Client 10 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:26.524651 UTC | Type: GET | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:26.524658 UTC | Content: GET Response to: Client 3 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:26.570673 UTC | Type: GET | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:26.570687 UTC | Content: GET Response to: Client 7 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:26.65509 UTC | Type: POST | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:26.655101 UTC | Content: POST Response to: Client 6 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:26.687116 UTC | Type: DELETE | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:26.687203 UTC | Content: DELETE Response: Client 10 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:26.696355 UTC | Type: DELETE | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:26.696363 UTC | Content: DELETE Response: Client 7 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.710424 UTC | Type: POST | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:26.710446 UTC | Content: POST Response to: Client 9 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.728947 UTC | Type: GET | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:26.72896 UTC | Content: GET Response to: Client 8 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - tokenABC
+Request Requeued: 2025-01-15 13:42:26.756176 UTC | Type: POST | Content: Client 4 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.756176 UTC | Type: POST | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:26.756392 UTC | Content: POST Response to: Client 4 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - token456
+Request Requeued: 2025-01-15 13:42:26.765347 UTC | Type: GET | Content: Client 5 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - token456
+Request Requeued: 2025-01-15 13:42:26.765347 UTC | Type: GET | Content: Client 5 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:26.765347 UTC | Type: GET | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:26.765596 UTC | Content: GET Response to: Client 5 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:26.779378 UTC | Type: DELETE | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:26.77939 UTC | Content: DELETE Response: Client 6 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:26.806434 UTC | Type: POST | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:26.806444 UTC | Content: POST Response to: Client 1 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:27.088107 UTC | Type: DELETE | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:27.088195 UTC | Content: DELETE Response: Client 5 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:27.088107 UTC | Type: DELETE | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:27.088948 UTC | Content: DELETE Response: Client 2 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:27.088112 UTC | Type: POST | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:27.089088 UTC | Content: POST Response to: Client 6 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:27.08811 UTC | Type: GET | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:27.08917 UTC | Content: GET Response to: Client 4 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:27.088124 UTC | Type: POST | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:27.089247 UTC | Content: POST Response to: Client 1 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:27.088125 UTC | Type: DELETE | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:27.089332 UTC | Content: DELETE Response: Client 3 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:27.088126 UTC | Type: POST | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:27.089433 UTC | Content: POST Response to: Client 10 says hello!
 --------------------------------------------------
 Authentication Failed (Retry): Token - token123
-Request Requeued: 2025-01-15 13:31:12.460774 UTC | Type: DELETE | Content: Client 9 says hello!
+Request Requeued: 2025-01-15 13:42:27.088153 UTC | Type: DELETE | Content: Client 7 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token123
 --------------------------------------------------
 Authenticated Token: token123
-Request: 2025-01-15 13:31:12.460774 UTC | Type: DELETE | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:12.460955 UTC | Content: DELETE Response: Client 9 says hello! has been deleted
+Request: 2025-01-15 13:42:27.088184 UTC | Type: GET | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:27.089554 UTC | Content: GET Response to: Client 9 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:27.088153 UTC | Type: DELETE | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:27.089635 UTC | Content: DELETE Response: Client 7 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:27.20095 UTC | Type: GET | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:27.201074 UTC | Content: GET Response to: Client 5 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:27.202091 UTC | Type: DELETE | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:27.202092 UTC | Content: DELETE Response: Client 8 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:27.231116 UTC | Type: POST | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:27.231136 UTC | Content: POST Response to: Client 1 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:27.236769 UTC | Type: POST | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:27.236884 UTC | Content: POST Response to: Client 9 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:27.276343 UTC | Type: GET | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:27.276465 UTC | Content: GET Response to: Client 4 says hello!
 --------------------------------------------------
 Authentication Failed (Retry): Token - token789
-Request Requeued: 2025-01-15 13:31:12.526155 UTC | Type: DELETE | Content: Client 4 says hello!
+Request Requeued: 2025-01-15 13:42:27.294885 UTC | Type: POST | Content: Client 10 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - token789
+Request Requeued: 2025-01-15 13:42:27.294885 UTC | Type: POST | Content: Client 10 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token789
 --------------------------------------------------
 Authenticated Token: token789
-Request: 2025-01-15 13:31:12.526155 UTC | Type: DELETE | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:12.526444 UTC | Content: DELETE Response: Client 4 says hello! has been deleted
+Request: 2025-01-15 13:42:27.294885 UTC | Type: POST | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:27.295094 UTC | Content: POST Response to: Client 10 says hello!
 --------------------------------------------------
-Authentication Successful: Token - token789
+Authentication Successful: Token - tokenABC
 --------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:12.543885 UTC | Type: GET | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:12.543898 UTC | Content: GET Response to: Client 2 says hello!
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:27.395439 UTC | Type: POST | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:27.395455 UTC | Content: POST Response to: Client 2 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token456
 --------------------------------------------------
 Authenticated Token: token456
-Request: 2025-01-15 13:31:12.604652 UTC | Type: POST | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:12.604666 UTC | Content: POST Response to: Client 10 says hello!
+Request: 2025-01-15 13:42:27.427898 UTC | Type: POST | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:27.427918 UTC | Content: POST Response to: Client 7 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:27.437151 UTC | Type: GET | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:27.437166 UTC | Content: GET Response to: Client 6 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:27.480178 UTC | Type: POST | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:27.480199 UTC | Content: POST Response to: Client 8 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token789
 --------------------------------------------------
 Authenticated Token: token789
-Request: 2025-01-15 13:31:12.604664 UTC | Type: POST | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:12.605422 UTC | Content: POST Response to: Client 3 says hello!
+Request: 2025-01-15 13:42:27.492874 UTC | Type: POST | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:27.4929 UTC | Content: POST Response to: Client 9 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:27.52188 UTC | Type: DELETE | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:27.521971 UTC | Content: DELETE Response: Client 3 says hello! has been deleted
+--------------------------------------------------
+Authentication Failed (Retry): Token - tokenABC
+Request Requeued: 2025-01-15 13:42:27.527731 UTC | Type: GET | Content: Client 2 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:27.527731 UTC | Type: GET | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:27.527839 UTC | Content: GET Response to: Client 2 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:27.557752 UTC | Type: DELETE | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:27.557812 UTC | Content: DELETE Response: Client 4 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:27.626599 UTC | Type: POST | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:27.626607 UTC | Content: POST Response to: Client 1 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - token789
+Request Requeued: 2025-01-15 13:42:27.639664 UTC | Type: POST | Content: Client 7 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:27.639664 UTC | Type: POST | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:27.639842 UTC | Content: POST Response to: Client 7 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:27.669611 UTC | Type: DELETE | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:27.669621 UTC | Content: DELETE Response: Client 5 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:27.680634 UTC | Type: POST | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:27.680649 UTC | Content: POST Response to: Client 10 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:27.731162 UTC | Type: DELETE | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:27.731241 UTC | Content: DELETE Response: Client 4 says hello! has been deleted
 --------------------------------------------------
 Authentication Failed (Retry): Token - token123
-Request Requeued: 2025-01-15 13:31:12.610414 UTC | Type: POST | Content: Client 6 says hello!
+Request Requeued: 2025-01-15 13:42:27.772204 UTC | Type: GET | Content: Client 3 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token123
 --------------------------------------------------
 Authenticated Token: token123
-Request: 2025-01-15 13:31:12.610414 UTC | Type: POST | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:12.610686 UTC | Content: POST Response to: Client 6 says hello!
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:12.616734 UTC | Type: GET | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:12.616748 UTC | Content: GET Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenDEF
-Request Requeued: 2025-01-15 13:31:12.673758 UTC | Type: GET | Content: Client 7 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:12.673758 UTC | Type: GET | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:12.673938 UTC | Content: GET Response to: Client 7 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token789
-Request Requeued: 2025-01-15 13:31:12.679423 UTC | Type: DELETE | Content: Client 8 says hello!
+Request: 2025-01-15 13:42:27.772204 UTC | Type: GET | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:27.77244 UTC | Content: GET Response to: Client 3 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token789
 --------------------------------------------------
 Authenticated Token: token789
-Request: 2025-01-15 13:31:12.679423 UTC | Type: DELETE | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:12.679543 UTC | Content: DELETE Response: Client 8 says hello! has been deleted
+Request: 2025-01-15 13:42:27.77651 UTC | Type: GET | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:27.776514 UTC | Content: GET Response to: Client 1 says hello!
 --------------------------------------------------
-Authentication Failed (Retry): Token - tokenABC
-Request Requeued: 2025-01-15 13:31:12.706551 UTC | Type: POST | Content: Client 1 says hello!
+Authentication Successful: Token - token456
 --------------------------------------------------
-Authentication Failed (Retry): Token - tokenABC
-Request Requeued: 2025-01-15 13:31:12.706551 UTC | Type: POST | Content: Client 1 says hello!
+Authenticated Token: token456
+Request: 2025-01-15 13:42:27.838762 UTC | Type: POST | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:27.838769 UTC | Content: POST Response to: Client 9 says hello!
 --------------------------------------------------
 Authentication Successful: Token - tokenABC
 --------------------------------------------------
 Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:12.706551 UTC | Type: POST | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:12.706845 UTC | Content: POST Response to: Client 1 says hello!
+Request: 2025-01-15 13:42:27.844404 UTC | Type: POST | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:27.844426 UTC | Content: POST Response to: Client 2 says hello!
 --------------------------------------------------
-Authentication Failed (Retry): Token - token456
-Request Requeued: 2025-01-15 13:31:12.709328 UTC | Type: GET | Content: Client 3 says hello!
+Authentication Successful: Token - token789
 --------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:12.709328 UTC | Type: GET | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:12.709404 UTC | Content: GET Response to: Client 3 says hello!
+Authenticated Token: token789
+Request: 2025-01-15 13:42:27.874424 UTC | Type: POST | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:27.874496 UTC | Content: POST Response to: Client 8 says hello!
 --------------------------------------------------
 Authentication Successful: Token - tokenDEF
 --------------------------------------------------
 Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:12.835912 UTC | Type: POST | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:12.835927 UTC | Content: POST Response to: Client 4 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:12.86074 UTC | Type: POST | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:12.866258 UTC | Content: POST Response to: Client 2 says hello!
+Request: 2025-01-15 13:42:27.902446 UTC | Type: DELETE | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:27.902456 UTC | Content: DELETE Response: Client 6 says hello! has been deleted
 --------------------------------------------------
 Authentication Failed (Retry): Token - tokenDEF
-Request Requeued: 2025-01-15 13:31:12.883593 UTC | Type: GET | Content: Client 10 says hello!
+Request Requeued: 2025-01-15 13:42:27.920478 UTC | Type: POST | Content: Client 4 says hello!
 --------------------------------------------------
 Authentication Successful: Token - tokenDEF
 --------------------------------------------------
 Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:12.883593 UTC | Type: GET | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:12.883811 UTC | Content: GET Response to: Client 10 says hello!
+Request: 2025-01-15 13:42:27.920478 UTC | Type: POST | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:27.920673 UTC | Content: POST Response to: Client 4 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token456
 --------------------------------------------------
 Authenticated Token: token456
-Request: 2025-01-15 13:31:13.034767 UTC | Type: GET | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:13.034795 UTC | Content: GET Response to: Client 9 says hello!
+Request: 2025-01-15 13:42:27.955501 UTC | Type: GET | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:27.955508 UTC | Content: GET Response to: Client 5 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:28.060907 UTC | Type: DELETE | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:28.060918 UTC | Content: DELETE Response: Client 10 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:28.069926 UTC | Type: DELETE | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:28.06993 UTC | Content: DELETE Response: Client 7 says hello! has been deleted
+--------------------------------------------------
+Authentication Failed (Retry): Token - tokenDEF
+Request Requeued: 2025-01-15 13:42:28.14665 UTC | Type: POST | Content: Client 3 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:28.14665 UTC | Type: POST | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:28.146844 UTC | Content: POST Response to: Client 5 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - tokenDEF
+Request Requeued: 2025-01-15 13:42:28.14665 UTC | Type: POST | Content: Client 3 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenDEF
+--------------------------------------------------
+Authenticated Token: tokenDEF
+Request: 2025-01-15 13:42:28.14665 UTC | Type: POST | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:28.147561 UTC | Content: POST Response to: Client 3 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:28.167595 UTC | Type: DELETE | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:28.167609 UTC | Content: DELETE Response: Client 6 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:28.175514 UTC | Type: POST | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:28.175526 UTC | Content: POST Response to: Client 2 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token123
 --------------------------------------------------
 Authenticated Token: token123
-Request: 2025-01-15 13:31:13.034767 UTC | Type: POST | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:13.035527 UTC | Content: POST Response to: Client 8 says hello!
+Request: 2025-01-15 13:42:28.17552 UTC | Type: GET | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:28.175761 UTC | Content: GET Response to: Client 9 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:28.217575 UTC | Type: DELETE | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:28.217595 UTC | Content: DELETE Response: Client 1 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:28.264881 UTC | Type: GET | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:28.264892 UTC | Content: GET Response to: Client 4 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:28.727175 UTC | Type: GET | Content: Client 3 says hello!
+Response: 2025-01-15 13:42:28.727191 UTC | Content: GET Response to: Client 3 says hello!
 --------------------------------------------------
 Authentication Failed (Retry): Token - token123
-Request Requeued: 2025-01-15 13:31:13.034772 UTC | Type: POST | Content: Client 5 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.034778 UTC | Type: DELETE | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:13.035715 UTC | Content: DELETE Response: Client 1 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.034775 UTC | Type: POST | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:13.035882 UTC | Content: POST Response to: Client 6 says hello!
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:13.034772 UTC | Type: POST | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:13.036059 UTC | Content: POST Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenABC
-Request Requeued: 2025-01-15 13:31:13.085863 UTC | Type: GET | Content: Client 10 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:13.085863 UTC | Type: GET | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:13.08605 UTC | Content: GET Response to: Client 10 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:13.112896 UTC | Type: POST | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:13.112924 UTC | Content: POST Response to: Client 7 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.17593 UTC | Type: DELETE | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:13.175961 UTC | Content: DELETE Response: Client 3 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:13.228963 UTC | Type: POST | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:13.228987 UTC | Content: POST Response to: Client 4 says hello!
+Request Requeued: 2025-01-15 13:42:28.727178 UTC | Type: GET | Content: Client 5 says hello!
 --------------------------------------------------
 Authentication Failed (Retry): Token - token789
-Request Requeued: 2025-01-15 13:31:13.25748 UTC | Type: GET | Content: Client 7 says hello!
+Request Requeued: 2025-01-15 13:42:28.727185 UTC | Type: POST | Content: Client 8 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:28.727184 UTC | Type: DELETE | Content: Client 4 says hello!
+Response: 2025-01-15 13:42:28.728208 UTC | Content: DELETE Response: Client 4 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:28.727191 UTC | Type: DELETE | Content: Client 9 says hello!
+Response: 2025-01-15 13:42:28.7283 UTC | Content: DELETE Response: Client 9 says hello! has been deleted
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:28.727184 UTC | Type: DELETE | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:28.728384 UTC | Content: DELETE Response: Client 2 says hello! has been deleted
+--------------------------------------------------
+Authentication Failed (Retry): Token - token123
+Request Requeued: 2025-01-15 13:42:28.727213 UTC | Type: GET | Content: Client 6 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:28.727215 UTC | Type: GET | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:28.728511 UTC | Content: GET Response to: Client 1 says hello!
+--------------------------------------------------
+Authentication Failed (Retry): Token - token456
+Request Requeued: 2025-01-15 13:42:28.727216 UTC | Type: GET | Content: Client 10 says hello!
+--------------------------------------------------
+Authentication Successful: Token - tokenABC
+--------------------------------------------------
+Authenticated Token: tokenABC
+Request: 2025-01-15 13:42:28.727218 UTC | Type: POST | Content: Client 7 says hello!
+Response: 2025-01-15 13:42:28.728627 UTC | Content: POST Response to: Client 7 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token123
+--------------------------------------------------
+Authenticated Token: token123
+Request: 2025-01-15 13:42:28.727178 UTC | Type: GET | Content: Client 5 says hello!
+Response: 2025-01-15 13:42:28.728808 UTC | Content: GET Response to: Client 5 says hello!
 --------------------------------------------------
 Authentication Failed (Retry): Token - token789
-Request Requeued: 2025-01-15 13:31:13.25748 UTC | Type: GET | Content: Client 7 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:13.25748 UTC | Type: GET | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:13.257736 UTC | Content: GET Response to: Client 7 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:13.262359 UTC | Type: POST | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:13.262367 UTC | Content: POST Response to: Client 2 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:13.265763 UTC | Type: GET | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:13.265777 UTC | Content: GET Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:13.310178 UTC | Type: GET | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:13.310195 UTC | Content: GET Response to: Client 8 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.311317 UTC | Type: GET | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:13.311332 UTC | Content: GET Response to: Client 10 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.37476 UTC | Type: POST | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:13.374769 UTC | Content: POST Response to: Client 6 says hello!
+Request Requeued: 2025-01-15 13:42:28.727185 UTC | Type: POST | Content: Client 8 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token123
 --------------------------------------------------
 Authenticated Token: token123
-Request: 2025-01-15 13:31:13.381524 UTC | Type: GET | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:13.381528 UTC | Content: GET Response to: Client 2 says hello!
+Request: 2025-01-15 13:42:28.727213 UTC | Type: GET | Content: Client 6 says hello!
+Response: 2025-01-15 13:42:28.728947 UTC | Content: GET Response to: Client 6 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token456
+--------------------------------------------------
+Authenticated Token: token456
+Request: 2025-01-15 13:42:28.727216 UTC | Type: GET | Content: Client 10 says hello!
+Response: 2025-01-15 13:42:28.729052 UTC | Content: GET Response to: Client 10 says hello!
+--------------------------------------------------
+Authentication Successful: Token - token789
+--------------------------------------------------
+Authenticated Token: token789
+Request: 2025-01-15 13:42:28.727185 UTC | Type: POST | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:28.729174 UTC | Content: POST Response to: Client 8 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token123
 --------------------------------------------------
 Authenticated Token: token123
-Request: 2025-01-15 13:31:13.409582 UTC | Type: GET | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:13.409588 UTC | Content: GET Response to: Client 1 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.487187 UTC | Type: GET | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:13.487211 UTC | Content: GET Response to: Client 9 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.518442 UTC | Type: POST | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:13.51851 UTC | Content: POST Response to: Client 4 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.535743 UTC | Type: POST | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:13.535747 UTC | Content: POST Response to: Client 2 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenABC
-Request Requeued: 2025-01-15 13:31:13.577501 UTC | Type: GET | Content: Client 3 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:13.577501 UTC | Type: GET | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:13.57773 UTC | Content: GET Response to: Client 3 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.836468 UTC | Type: POST | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:13.836546 UTC | Content: POST Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:13.836487 UTC | Type: GET | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:13.837227 UTC | Content: GET Response to: Client 9 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.836489 UTC | Type: DELETE | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:13.837377 UTC | Content: DELETE Response: Client 8 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.83649 UTC | Type: POST | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:13.837471 UTC | Content: POST Response to: Client 1 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.83651 UTC | Type: DELETE | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:13.837616 UTC | Content: DELETE Response: Client 6 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:13.836521 UTC | Type: GET | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:13.837707 UTC | Content: GET Response to: Client 7 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:13.836521 UTC | Type: GET | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:13.837825 UTC | Content: GET Response to: Client 10 says hello!
+Request: 2025-01-15 13:42:29.164529 UTC | Type: POST | Content: Client 2 says hello!
+Response: 2025-01-15 13:42:29.164539 UTC | Content: POST Response to: Client 2 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token456
 --------------------------------------------------
 Authenticated Token: token456
-Request: 2025-01-15 13:31:13.843281 UTC | Type: DELETE | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:13.843284 UTC | Content: DELETE Response: Client 2 says hello! has been deleted
+Request: 2025-01-15 13:42:29.174549 UTC | Type: POST | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:29.174571 UTC | Content: POST Response to: Client 8 says hello!
 --------------------------------------------------
-Authentication Failed (Retry): Token - tokenDEF
-Request Requeued: 2025-01-15 13:31:13.914328 UTC | Type: POST | Content: Client 3 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:13.914328 UTC | Type: POST | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:13.914522 UTC | Content: POST Response to: Client 3 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token456
-Request Requeued: 2025-01-15 13:31:13.958369 UTC | Type: POST | Content: Client 7 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token456
-Request Requeued: 2025-01-15 13:31:13.958369 UTC | Type: POST | Content: Client 7 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:13.958369 UTC | Type: POST | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:13.958654 UTC | Content: POST Response to: Client 7 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:13.990911 UTC | Type: DELETE | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:13.990934 UTC | Content: DELETE Response: Client 4 says hello! has been deleted
---------------------------------------------------
-Authentication Failed (Retry): Token - token789
-Request Requeued: 2025-01-15 13:31:14.005943 UTC | Type: DELETE | Content: Client 10 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:14.005943 UTC | Type: DELETE | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:14.006173 UTC | Content: DELETE Response: Client 10 says hello! has been deleted
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenABC
-Request Requeued: 2025-01-15 13:31:14.032118 UTC | Type: GET | Content: Client 6 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:14.032118 UTC | Type: GET | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:14.032367 UTC | Content: GET Response to: Client 6 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:14.039329 UTC | Type: GET | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:14.039354 UTC | Content: GET Response to: Client 2 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenABC
-Request Requeued: 2025-01-15 13:31:14.061707 UTC | Type: GET | Content: Client 8 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:14.061707 UTC | Type: GET | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:14.061873 UTC | Content: GET Response to: Client 8 says hello!
+Authentication Failed (Retry): Token - token123
+Request Requeued: 2025-01-15 13:42:29.223464 UTC | Type: POST | Content: Client 1 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token123
 --------------------------------------------------
 Authenticated Token: token123
-Request: 2025-01-15 13:31:14.157043 UTC | Type: GET | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:14.157051 UTC | Content: GET Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:14.168617 UTC | Type: POST | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:14.168631 UTC | Content: POST Response to: Client 2 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:14.194137 UTC | Type: POST | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:14.194144 UTC | Content: POST Response to: Client 1 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.269956 UTC | Type: POST | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:14.269976 UTC | Content: POST Response to: Client 6 says hello!
+Request: 2025-01-15 13:42:29.223464 UTC | Type: POST | Content: Client 1 says hello!
+Response: 2025-01-15 13:42:29.223663 UTC | Content: POST Response to: Client 1 says hello!
 --------------------------------------------------
 Authentication Successful: Token - token789
 --------------------------------------------------
 Authenticated Token: token789
-Request: 2025-01-15 13:31:14.286516 UTC | Type: POST | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:14.286538 UTC | Content: POST Response to: Client 9 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token456
-Request Requeued: 2025-01-15 13:31:14.323084 UTC | Type: POST | Content: Client 8 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.323084 UTC | Type: POST | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:14.323395 UTC | Content: POST Response to: Client 8 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.34091 UTC | Type: GET | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:14.340923 UTC | Content: GET Response to: Client 3 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.352215 UTC | Type: GET | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:14.352223 UTC | Content: GET Response to: Client 7 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token456
-Request Requeued: 2025-01-15 13:31:14.361232 UTC | Type: GET | Content: Client 5 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.361232 UTC | Type: GET | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:14.361406 UTC | Content: GET Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.375252 UTC | Type: POST | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:14.375272 UTC | Content: POST Response to: Client 10 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenDEF
-Request Requeued: 2025-01-15 13:31:14.403277 UTC | Type: DELETE | Content: Client 4 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:14.403277 UTC | Type: DELETE | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:14.403454 UTC | Content: DELETE Response: Client 4 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:14.427417 UTC | Type: POST | Content: Client 2 says hello!
-Response: 2025-01-15 13:31:14.427425 UTC | Content: POST Response to: Client 2 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token456
-Request Requeued: 2025-01-15 13:31:14.444907 UTC | Type: DELETE | Content: Client 9 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token456
-Request Requeued: 2025-01-15 13:31:14.444907 UTC | Type: DELETE | Content: Client 9 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.444907 UTC | Type: DELETE | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:14.445235 UTC | Content: DELETE Response: Client 9 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:14.534291 UTC | Type: DELETE | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:14.534383 UTC | Content: DELETE Response: Client 3 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:14.563844 UTC | Type: POST | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:14.563906 UTC | Content: POST Response to: Client 9 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:14.675037 UTC | Type: GET | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:14.67506 UTC | Content: GET Response to: Client 1 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenDEF
-Request Requeued: 2025-01-15 13:31:14.677301 UTC | Type: GET | Content: Client 4 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:14.677301 UTC | Type: GET | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:14.677499 UTC | Content: GET Response to: Client 4 says hello!
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:14.715321 UTC | Type: DELETE | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:14.715332 UTC | Content: DELETE Response: Client 8 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:14.742984 UTC | Type: GET | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:14.742993 UTC | Content: GET Response to: Client 6 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:14.770968 UTC | Type: DELETE | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:14.770975 UTC | Content: DELETE Response: Client 7 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.804846 UTC | Type: POST | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:14.804863 UTC | Content: POST Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenDEF
-Request Requeued: 2025-01-15 13:31:14.827471 UTC | Type: GET | Content: Client 3 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:14.827471 UTC | Type: GET | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:14.827634 UTC | Content: GET Response to: Client 3 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:14.836664 UTC | Type: DELETE | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:14.836668 UTC | Content: DELETE Response: Client 9 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:14.849976 UTC | Type: GET | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:14.849984 UTC | Content: GET Response to: Client 10 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:14.872683 UTC | Type: GET | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:14.872702 UTC | Content: GET Response to: Client 4 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:14.885727 UTC | Type: DELETE | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:14.885735 UTC | Content: DELETE Response: Client 1 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:14.965438 UTC | Type: POST | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:14.965459 UTC | Content: POST Response to: Client 6 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:15.444726 UTC | Type: GET | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:15.44481 UTC | Content: GET Response to: Client 10 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:15.444741 UTC | Type: DELETE | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:15.445509 UTC | Content: DELETE Response: Client 9 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:15.444745 UTC | Type: GET | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:15.445634 UTC | Content: GET Response to: Client 8 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:15.44475 UTC | Type: POST | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:15.445748 UTC | Content: POST Response to: Client 7 says hello!
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:15.444757 UTC | Type: GET | Content: Client 3 says hello!
-Response: 2025-01-15 13:31:15.44584 UTC | Content: GET Response to: Client 3 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - tokenABC
-Request Requeued: 2025-01-15 13:31:15.444774 UTC | Type: POST | Content: Client 6 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:15.444745 UTC | Type: GET | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:15.446047 UTC | Content: GET Response to: Client 1 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:15.444792 UTC | Type: DELETE | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:15.446235 UTC | Content: DELETE Response: Client 5 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:15.444805 UTC | Type: POST | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:15.446387 UTC | Content: POST Response to: Client 4 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:15.444774 UTC | Type: POST | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:15.446478 UTC | Content: POST Response to: Client 6 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenABC
---------------------------------------------------
-Authenticated Token: tokenABC
-Request: 2025-01-15 13:31:15.644188 UTC | Type: DELETE | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:15.644205 UTC | Content: DELETE Response: Client 1 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - token123
---------------------------------------------------
-Authenticated Token: token123
-Request: 2025-01-15 13:31:15.650923 UTC | Type: POST | Content: Client 5 says hello!
-Response: 2025-01-15 13:31:15.650935 UTC | Content: POST Response to: Client 5 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token789
-Request Requeued: 2025-01-15 13:31:15.674977 UTC | Type: DELETE | Content: Client 8 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:15.674977 UTC | Type: DELETE | Content: Client 8 says hello!
-Response: 2025-01-15 13:31:15.675233 UTC | Content: DELETE Response: Client 8 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:15.690013 UTC | Type: GET | Content: Client 4 says hello!
-Response: 2025-01-15 13:31:15.69002 UTC | Content: GET Response to: Client 4 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:15.741665 UTC | Type: DELETE | Content: Client 9 says hello!
-Response: 2025-01-15 13:31:15.741673 UTC | Content: DELETE Response: Client 9 says hello! has been deleted
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:15.806352 UTC | Type: POST | Content: Client 6 says hello!
-Response: 2025-01-15 13:31:15.806364 UTC | Content: POST Response to: Client 6 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token456
-Request Requeued: 2025-01-15 13:31:15.873024 UTC | Type: GET | Content: Client 1 says hello!
---------------------------------------------------
-Authentication Successful: Token - token456
---------------------------------------------------
-Authenticated Token: token456
-Request: 2025-01-15 13:31:15.873024 UTC | Type: GET | Content: Client 1 says hello!
-Response: 2025-01-15 13:31:15.873321 UTC | Content: GET Response to: Client 1 says hello!
---------------------------------------------------
-Authentication Successful: Token - tokenDEF
---------------------------------------------------
-Authenticated Token: tokenDEF
-Request: 2025-01-15 13:31:15.888072 UTC | Type: POST | Content: Client 7 says hello!
-Response: 2025-01-15 13:31:15.888114 UTC | Content: POST Response to: Client 7 says hello!
---------------------------------------------------
-Authentication Failed (Retry): Token - token789
-Request Requeued: 2025-01-15 13:31:15.935366 UTC | Type: GET | Content: Client 10 says hello!
---------------------------------------------------
-Authentication Successful: Token - token789
---------------------------------------------------
-Authenticated Token: token789
-Request: 2025-01-15 13:31:15.935366 UTC | Type: GET | Content: Client 10 says hello!
-Response: 2025-01-15 13:31:15.935544 UTC | Content: GET Response to: Client 10 says hello!
+Request: 2025-01-15 13:42:29.437343 UTC | Type: DELETE | Content: Client 8 says hello!
+Response: 2025-01-15 13:42:29.43735 UTC | Content: DELETE Response: Client 8 says hello! has been deleted
 --------------------------------------------------
 Final Summary: Total Requests Processed = 100
