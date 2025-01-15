@@ -11,7 +11,7 @@ createRequest :: Int -> IO Request
 createRequest clientId = do
     timestamp <- getCurrentTime
     requestType <- randomRIO (GET, DELETE)  -- Randomly select a request type
-    let content = "Client " ++ show clientId ++ " says hello!"
+    let content = "Client " ++ show clientId ++ " says he/she loves Functional Programming!"
     token <- randomRIO (0, length validTokens - 1)
     return $ Request timestamp requestType content (validTokens !! token)
 
